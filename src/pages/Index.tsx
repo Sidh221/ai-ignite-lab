@@ -10,7 +10,7 @@ import BookingSection from "@/components/BookingSection";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-[#0B0B0F] text-white overflow-hidden">
+    <div className="min-h-screen bg-navy-dark text-white overflow-hidden">
       <NavBar />
       <HeroSection />
       <ServicesSection />

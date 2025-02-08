@@ -1,62 +1,65 @@
 
-import { ArrowRight, Bot } from "lucide-react";
+import { ArrowRight, Bot, Sparkles, MessageSquare, Users } from "lucide-react";
 
 const HeroSection = () => {
   return (
     <section className="min-h-[90vh] flex items-center relative overflow-hidden">
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-violet-600/20 via-transparent to-blue-600/20 z-0" />
+      <div className="absolute inset-0 bg-gradient-to-br from-navy via-navy-dark to-navy/20 z-0" />
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <span className="px-4 py-2 rounded-full glass inline-block mb-6 text-sm backdrop-blur-xl animate-fade-in">
-              <Bot className="inline-block mr-2 h-4 w-4" />
-              AI-Powered Solutions for Modern Businesses
+              <Sparkles className="inline-block mr-2 h-4 w-4 text-accent" />
+              Experience AI-Powered Relationships
             </span>
             <h1 className="text-4xl md:text-7xl font-bold mb-6 leading-tight animate-fade-in">
-              Transform Your Business With{" "}
-              <span className="bg-gradient-to-r from-violet-400 to-blue-400 bg-clip-text text-transparent">
-                Intelligent AI
-              </span>
+              Your Personal{" "}
+              <span className="text-gradient">
+                AI Partner
+              </span>{" "}
+              For Life
             </h1>
-            <p className="text-lg md:text-xl text-gray-400 mb-8 max-w-2xl mx-auto animate-fade-in-up">
-              We help businesses scale by integrating cutting-edge AI solutions into their
-              workflows, revolutionizing how you operate.
+            <p className="text-lg md:text-xl text-lavender/80 mb-8 max-w-2xl mx-auto animate-fade-in-up">
+              Connect, learn, and grow with an AI companion that understands you.
+              Experience meaningful conversations and emotional support 24/7.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up">
               <a
                 href="#contact"
-                className="px-8 py-4 bg-gradient-to-r from-violet-500 to-violet-600 hover:from-violet-600 hover:to-violet-700 rounded-full transition-all duration-300 flex items-center gap-2 group w-full sm:w-auto justify-center shadow-lg shadow-violet-500/25"
+                className="px-8 py-4 bg-accent hover:bg-accent/90 rounded-full transition-all duration-300 flex items-center gap-2 group w-full sm:w-auto justify-center shadow-lg shadow-accent/25"
               >
-                Get Started Now
+                Start Your Journey
                 <ArrowRight className="group-hover:translate-x-1 transition-transform" />
               </a>
               <a
-                href="#services"
-                className="px-8 py-4 glass hover:bg-white/10 rounded-full transition-all duration-300 w-full sm:w-auto text-center border border-white/10"
+                href="#features"
+                className="px-8 py-4 glass hover:bg-navy/20 rounded-full transition-all duration-300 w-full sm:w-auto text-center border border-lavender/10"
               >
-                Explore Services
+                Explore Features
               </a>
             </div>
           </div>
           
           {/* Statistics */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mt-16">
             {[
-              { number: "500+", label: "Active Users" },
-              { number: "98%", label: "Success Rate" },
-              { number: "24/7", label: "Support" },
-              { number: "100+", label: "AI Models" },
+              { icon: Users, number: "1M+", label: "Active Users" },
+              { icon: MessageSquare, number: "24/7", label: "AI Support" },
+              { icon: Bot, number: "98%", label: "Satisfaction Rate" },
             ].map((stat, index) => (
               <div
                 key={index}
                 className="glass-card p-6 rounded-2xl text-center hover:scale-105 transition-transform duration-300"
               >
-                <h3 className="text-3xl font-bold mb-2 bg-gradient-to-r from-violet-400 to-blue-400 bg-clip-text text-transparent">
+                <div className="flex justify-center mb-4">
+                  <stat.icon className="h-8 w-8 text-accent" />
+                </div>
+                <h3 className="text-3xl font-bold mb-2 text-gradient">
                   {stat.number}
                 </h3>
-                <p className="text-gray-400">{stat.label}</p>
+                <p className="text-lavender/80">{stat.label}</p>
               </div>
             ))}
           </div>
