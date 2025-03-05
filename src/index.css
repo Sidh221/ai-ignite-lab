@@ -1,9 +1,8 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 @layer base {
   :root {
@@ -21,7 +20,7 @@
 
   body {
     @apply bg-black text-foreground antialiased min-h-screen;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
   }
 
@@ -30,7 +29,7 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-bold;
+    @apply font-semibold;
   }
 }
 
@@ -60,15 +59,15 @@
   }
 
   .btn-primary {
-    @apply px-6 py-3 rounded-full bg-gradient-steel-violet text-white font-medium hover:shadow-lg hover:shadow-violet/30 transition-all duration-300 hover:-translate-y-1;
+    @apply px-6 py-3 rounded-full bg-gradient-steel-violet text-white font-medium hover:shadow-lg hover:shadow-violet/30 transition-all duration-300 hover:-translate-y-1 flex items-center gap-2;
   }
 
   .btn-secondary {
-    @apply px-6 py-3 rounded-full bg-gradient-steel-cyclamen text-white font-medium hover:shadow-lg hover:shadow-cyclamen/30 transition-all duration-300 hover:-translate-y-1;
+    @apply px-6 py-3 rounded-full bg-gradient-steel-cyclamen text-white font-medium hover:shadow-lg hover:shadow-cyclamen/30 transition-all duration-300 hover:-translate-y-1 flex items-center gap-2;
   }
 
   .btn-outline {
-    @apply px-6 py-3 rounded-full border border-white/20 hover:border-white/50 transition-all duration-300 hover:-translate-y-1;
+    @apply px-6 py-3 rounded-full border border-white/20 hover:border-white/50 transition-all duration-300 hover:-translate-y-1 flex items-center gap-2;
   }
 }
 

@@ -19,7 +19,6 @@ const NavBar = () => {
     { text: "About", href: "#about" },
     { text: "Industries", href: "#industries" },
     { text: "Features", href: "#features" },
-    { text: "Case Studies", href: "#case-studies" },
     { text: "Demo", href: "#demo" },
     { text: "Blog", href: "#blog" },
     { text: "FAQ", href: "#faq" }
@@ -40,7 +39,7 @@ const NavBar = () => {
             className="flex items-center gap-2 text-2xl font-bold bg-gradient-to-r from-steel to-violet bg-clip-text text-transparent"
           >
             <Bot className="text-violet" size={28} />
-            VOICE·AI
+            INNOVARA·AI
           </a>
 
           {/* Desktop Navigation */}

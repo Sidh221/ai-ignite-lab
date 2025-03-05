@@ -1,5 +1,5 @@
 
-import { ArrowRight, Bot, Sparkles, MessageSquare, Users, Headphones, MicIcon, ChevronDown } from "lucide-react";
+import { ArrowRight, Bot, Sparkles, Headphones, MicIcon, ChevronDown } from "lucide-react";
 
 const HeroSection = () => {
   return (
@@ -41,28 +41,6 @@ const HeroSection = () => {
               <MicIcon className="h-5 w-5" />
               Explore Solutions
             </a>
-          </div>
-          
-          {/* Statistics */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-16">
-            {[
-              { icon: Users, number: "500+", label: "Businesses Empowered" },
-              { icon: MessageSquare, number: "30+", label: "Languages Supported" },
-              { icon: Bot, number: "99.7%", label: "Customer Satisfaction" },
-            ].map((stat, index) => (
-              <div
-                key={index}
-                className="glass-card p-6 rounded-2xl text-center hover:scale-105 transition-transform duration-300"
-              >
-                <div className="flex justify-center mb-4">
-                  <stat.icon className="h-8 w-8 text-cyclamen" />
-                </div>
-                <h3 className="text-3xl font-bold mb-2 text-gradient-steel-violet">
-                  {stat.number}
-                </h3>
-                <p className="text-white/70">{stat.label}</p>
-              </div>
-            ))}
           </div>
           
           <div className="mt-20 animate-bounce">
