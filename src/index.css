@@ -3,7 +3,18 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Import Poppins as fallback */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Import Luxora Grotesk Light font - This assumes the font files are in the public/fonts directory */
+@font-face {
+  font-family: 'Luxora Grotesk';
+  src: url('/fonts/LuxoraGrotesk-Light.woff2') format('woff2'),
+       url('/fonts/LuxoraGrotesk-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
 
 @layer base {
   :root {
@@ -21,7 +32,7 @@
 
   body {
     @apply bg-black text-foreground antialiased min-h-screen;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Luxora Grotesk', 'Poppins', sans-serif;
     font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
   }
 
