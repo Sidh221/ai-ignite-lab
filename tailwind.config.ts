@@ -43,6 +43,11 @@ export default {
           DEFAULT: "#090817",
           light: "#1E215C",
         },
+        // New color palette
+        steel: "#B85ABD",
+        cyclamen: "#E86C94",
+        violet: "#8547E9",
+        black: "#000101",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -70,6 +75,20 @@ export default {
           "0%": { opacity: "0", transform: "translateY(20px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
+        "pulse-slow": {
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: "0.7" },
+        },
+        wave: {
+          "0%": { transform: "rotate(0.0deg)" },
+          "10%": { transform: "rotate(14.0deg)" },
+          "20%": { transform: "rotate(-8.0deg)" },
+          "30%": { transform: "rotate(14.0deg)" },
+          "40%": { transform: "rotate(-4.0deg)" },
+          "50%": { transform: "rotate(10.0deg)" },
+          "60%": { transform: "rotate(0.0deg)" },
+          "100%": { transform: "rotate(0.0deg)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -77,6 +96,14 @@ export default {
         float: "float 6s ease-in-out infinite",
         "fade-in": "fade-in 0.5s ease-out",
         "fade-in-up": "fade-in-up 0.7s ease-out",
+        "pulse-slow": "pulse-slow 3s infinite ease-in-out",
+        wave: "wave 2.5s ease-in-out infinite",
+      },
+      backgroundImage: {
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "gradient-steel-violet": "linear-gradient(90deg, #B85ABD 0%, #8547E9 100%)",
+        "gradient-steel-cyclamen": "linear-gradient(90deg, #B85ABD 0%, #E86C94 100%)",
+        "gradient-violet-cyclamen": "linear-gradient(90deg, #8547E9 0%, #E86C94 100%)",
       },
     },
   },
