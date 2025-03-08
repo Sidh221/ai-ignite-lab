@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -43,10 +42,9 @@ export default {
           DEFAULT: "#090817",
           light: "#1E215C",
         },
-        // New color palette
-        steel: "#B85ABD",
-        cyclamen: "#E86C94",
-        violet: "#8547E9",
+        steel: "#5E3B9F",
+        cyclamen: "#8547E9",
+        violet: "#4E2A84",
         black: "#000101",
       },
       borderRadius: {
@@ -104,6 +102,9 @@ export default {
         "gradient-steel-violet": "linear-gradient(90deg, #B85ABD 0%, #8547E9 100%)",
         "gradient-steel-cyclamen": "linear-gradient(90deg, #B85ABD 0%, #E86C94 100%)",
         "gradient-violet-cyclamen": "linear-gradient(90deg, #8547E9 0%, #E86C94 100%)",
+      },
+      fontFamily: {
+        sans: ['Inter', 'Luxora Grotesk', 'Poppins', 'sans-serif'],
       },
     },
   },

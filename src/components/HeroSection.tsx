@@ -17,11 +17,11 @@ const HeroSection = () => {
           </span>
           <h1 className="text-4xl md:text-7xl font-bold mb-6 leading-tight animate-fade-in tracking-tight">
             Revolutionize Customer Experience with{" "}
-            <span className="animate-gradient-text font-semibold">
+            <span className="animate-gradient-text font-bold">
               AI Voice Agents
             </span>
           </h1>
-          <p className="text-lg md:text-xl text-white/80 mb-8 max-w-2xl mx-auto animate-fade-in-up font-normal">
+          <p className="text-lg md:text-xl text-white/80 mb-8 max-w-2xl mx-auto animate-fade-in-up">
             Enhance your customer interactions with intelligent, natural-sounding AI Voice agents 
             tailored for restaurants, hotels, and medical facilities.
           </p>
