@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -46,6 +47,11 @@ export default {
         cyclamen: "#8547E9",
         violet: "#4E2A84",
         black: "#000101",
+        purple: {
+          DEFAULT: "#4E2A84", 
+          light: "#6B40B0",
+          dark: "#3A1F62"
+        }
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -104,7 +110,8 @@ export default {
         "gradient-violet-cyclamen": "linear-gradient(90deg, #8547E9 0%, #E86C94 100%)",
       },
       fontFamily: {
-        sans: ['Inter', 'Luxora Grotesk', 'Poppins', 'sans-serif'],
+        sans: ['Nunito Sans', 'Inter', 'Luxora Grotesk', 'Poppins', 'sans-serif'],
+        nunito: ['Nunito Sans', 'sans-serif'],
       },
     },
   },
