@@ -5,8 +5,8 @@
 /* Import Poppins as fallback */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-/* Import Inter font which looks similar to the image */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap');
+/* Import Montserrat font which matches the image */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
 
 /* Keep Luxora Grotesk as an option */
 @font-face {
@@ -34,8 +34,8 @@
 
   body {
     @apply bg-black text-foreground antialiased min-h-screen;
-    font-family: 'Inter', 'Luxora Grotesk', 'Poppins', sans-serif;
-    font-weight: 300;
+    font-family: 'Montserrat', 'Luxora Grotesk', 'Poppins', sans-serif;
+    font-weight: 400;
     letter-spacing: -0.01em;
     font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
   }
@@ -45,8 +45,8 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-normal tracking-tight;
-    letter-spacing: -0.02em;
+    @apply font-semibold tracking-tight;
+    letter-spacing: -0.01em;
   }
 }
 
