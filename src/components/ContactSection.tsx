@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { toast } from "sonner";
 import { Mail, Phone, Send, MapPin, Sparkles } from "lucide-react";
+import BookingCalendar from "./BookingCalendar";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -158,6 +159,9 @@ const ContactSection = () => {
                 Send Message
               </button>
             </form>
+            
+            {/* Add Booking Calendar Component */}
+            <BookingCalendar />
           </div>
           
           <div className="flex flex-col gap-6">

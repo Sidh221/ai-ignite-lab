@@ -1,4 +1,3 @@
-
 import { Facebook, Twitter, Linkedin, Instagram, Bot, Send, Mail, Phone, MapPin } from "lucide-react";
 
 const Footer = () => {
@@ -8,8 +7,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-10">
           <div>
             <div className="flex items-center gap-2 text-2xl font-bold bg-gradient-to-r from-steel to-violet bg-clip-text text-transparent mb-4">
-              <Bot className="text-violet" size={28} />
-              VOICE·AI
+              <img 
+                src="/lovable-uploads/1bc8889e-a10c-4871-a599-1439a4d03d9d.png" 
+                alt="Innovara AI Logo" 
+                className="h-8 w-auto" 
+              />
+              Innovara AI
             </div>
             <p className="text-white/70">
               Transforming customer interactions with intelligent AI Voice agents 
@@ -153,7 +156,7 @@ const Footer = () => {
         
         <div className="border-t border-white/10 pt-8 text-center text-white/50 text-sm">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p>&copy; 2024 Voice·AI. All rights reserved.</p>
+            <p>&copy; 2024 Innovara AI. All rights reserved.</p>
             <div className="flex space-x-4 mt-4 md:mt-0">
               <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
               <a href="#" className="hover:text-white transition-colors">Terms of Service</a>

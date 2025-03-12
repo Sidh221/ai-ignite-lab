@@ -39,10 +39,12 @@ const NavBar = () => {
             to="/"
             className="flex items-center gap-2 text-2xl font-bold text-white"
           >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white">
-              <path d="M12 19L4 7L8 3L12 7L16 3L20 7L12 19Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-            Archangel AI
+            <img 
+              src="/lovable-uploads/1bc8889e-a10c-4871-a599-1439a4d03d9d.png" 
+              alt="Innovara AI Logo" 
+              className="h-8 w-auto" 
+            />
+            Innovara AI
           </Link>
 
           {/* Desktop Navigation */}
