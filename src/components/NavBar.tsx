@@ -1,6 +1,7 @@
 
 import { useState, useEffect } from "react";
-import { Menu, X, Bot } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -34,15 +35,15 @@ const NavBar = () => {
     >
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
-          <a
-            href="#"
+          <Link
+            to="/"
             className="flex items-center gap-2 text-2xl font-bold text-white"
           >
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white">
               <path d="M12 19L4 7L8 3L12 7L16 3L20 7L12 19Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
             Archangel AI
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
@@ -61,6 +62,7 @@ const NavBar = () => {
           <button
             className="md:hidden text-white"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle mobile menu"
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
