@@ -39,11 +39,13 @@ const NavBar = () => {
             to="/"
             className="flex items-center gap-2 text-2xl font-bold text-white"
           >
-            <img 
-              src="/lovable-uploads/1bc8889e-a10c-4871-a599-1439a4d03d9d.png" 
-              alt="Innovara AI Logo" 
-              className="h-8 w-auto" 
-            />
+            <div className="bg-navy rounded-full p-1">
+              <img 
+                src="/lovable-uploads/1bc8889e-a10c-4871-a599-1439a4d03d9d.png" 
+                alt="Innovara AI Logo" 
+                className="h-8 w-auto" 
+              />
+            </div>
             Innovara AI
           </Link>
 
