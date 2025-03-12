@@ -1,52 +1,86 @@
 
-import { ArrowRight, Bot, Sparkles, Headphones, MicIcon, ChevronDown } from "lucide-react";
+import { ArrowRight, Mic, Globe, Bot, Shield, BarChart3, MessageSquare } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section className="min-h-[100vh] pt-28 pb-20 flex items-center relative overflow-hidden">
-      {/* Background effects */}
-      <div className="blob bg-violet/30 top-20 right-20"></div>
-      <div className="blob bg-steel/30 bottom-20 left-20"></div>
-      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/90 z-0" />
+    <section className="min-h-[100vh] py-32 flex items-center justify-center relative overflow-hidden bg-lavender">
+      {/* Subtle background gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-radial from-white/50 to-lavender/80 z-0"></div>
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
-          <span className="px-4 py-2 rounded-full glass inline-block mb-6 text-sm backdrop-blur-xl animate-fade-in">
-            <Sparkles className="inline-block mr-2 h-4 w-4 text-cyclamen" />
-            AI Voice Agents for Business
-          </span>
-          <h1 className="text-4xl md:text-7xl font-bold mb-6 leading-tight animate-fade-in tracking-tight">
-            Revolutionize Customer Experience with{" "}
-            <span className="animate-gradient-text font-bold">
-              AI Voice Agents
-            </span>
-          </h1>
-          <p className="text-lg md:text-xl text-white/80 mb-8 max-w-2xl mx-auto animate-fade-in-up">
-            Enhance your customer interactions with intelligent, natural-sounding AI Voice agents 
-            tailored for restaurants, hotels, and medical facilities.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up">
-            <a
-              href="#demo"
-              className="btn-primary w-full sm:w-auto justify-center group"
-            >
-              <Headphones className="h-5 w-5" />
-              Try Interactive Demo
-              <ArrowRight className="group-hover:translate-x-1 transition-transform" />
-            </a>
-            <a
-              href="#industries"
-              className="btn-outline w-full sm:w-auto justify-center"
-            >
-              <MicIcon className="h-5 w-5" />
-              Explore Solutions
-            </a>
+        <div className="max-w-5xl mx-auto text-center relative">
+          {/* Top icon cards */}
+          <div className="flex justify-between mb-10">
+            <div className="invisible sm:visible">
+              {/* Placeholder for layout */}
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-md inline-block animate-float">
+              <Globe className="h-12 w-12 text-navy" />
+            </div>
+            <div className="invisible sm:visible">
+              {/* Placeholder for layout */}
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-md inline-block animate-float" style={{ animationDelay: "0.5s" }}>
+              <Mic className="h-12 w-12 text-navy" />
+            </div>
+            <div className="invisible sm:visible">
+              {/* Placeholder for layout */}
+            </div>
           </div>
           
-          <div className="mt-20 animate-bounce">
-            <a href="#about" className="text-white/60 hover:text-white transition-colors">
-              <ChevronDown className="mx-auto h-8 w-8" />
-            </a>
+          {/* Middle row with side icons and main heading */}
+          <div className="flex items-center justify-between">
+            <div className="bg-white p-6 rounded-lg shadow-md hidden sm:block animate-float" style={{ animationDelay: "1s" }}>
+              <Bot className="h-12 w-12 text-navy" />
+            </div>
+            
+            <div className="mx-auto text-center px-4">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-navy leading-tight">
+                Elevate Your Business<br />Beyond Limits
+              </h1>
+              <p className="text-lg md:text-xl text-navy/80 mb-10">
+                Precision meets progress through intelligent efficiency
+              </p>
+              <a
+                href="#contact"
+                className="bg-navy text-white px-8 py-4 rounded-md text-lg font-medium hover:bg-navy-dark transition-colors inline-block"
+              >
+                Get Started Today
+              </a>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow-md hidden sm:block animate-float" style={{ animationDelay: "1.5s" }}>
+              <BarChart3 className="h-12 w-12 text-navy" />
+            </div>
+          </div>
+          
+          {/* Bottom icon cards */}
+          <div className="flex justify-between mt-10">
+            <div className="invisible sm:visible">
+              {/* Placeholder for layout */}
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-md inline-block animate-float" style={{ animationDelay: "2s" }}>
+              <Shield className="h-12 w-12 text-navy" />
+            </div>
+            <div className="invisible sm:visible">
+              {/* Placeholder for layout */}
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-md inline-block animate-float" style={{ animationDelay: "2.5s" }}>
+              <MessageSquare className="h-12 w-12 text-navy" />
+            </div>
+            <div className="invisible sm:visible">
+              {/* Placeholder for layout */}
+            </div>
+          </div>
+          
+          {/* Mobile-only icons that appear below heading on small screens */}
+          <div className="grid grid-cols-2 gap-4 mt-8 sm:hidden">
+            <div className="bg-white p-6 rounded-lg shadow-md flex justify-center">
+              <Bot className="h-12 w-12 text-navy" />
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-md flex justify-center">
+              <BarChart3 className="h-12 w-12 text-navy" />
+            </div>
           </div>
         </div>
       </div>
