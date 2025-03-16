@@ -39,9 +39,9 @@ const NavBar = () => {
             to="/"
             className="flex items-center gap-2 text-2xl font-bold text-white"
           >
-            <div className="bg-navy rounded-full p-1">
+            <div className="bg-gradient-to-br from-purple to-cyclamen rounded-full p-1.5">
               <img 
-                src="/lovable-uploads/1bc8889e-a10c-4871-a599-1439a4d03d9d.png" 
+                src="/lovable-uploads/03c35b9e-6e1b-4c45-8c26-28aa8bc436a1.png" 
                 alt="Innovara AI Logo" 
                 className="h-8 w-auto" 
               />
