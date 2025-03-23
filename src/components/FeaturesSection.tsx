@@ -90,13 +90,6 @@ const FeaturesSection = () => {
             </div>
           ))}
         </div>
-        
-        <div className="mt-16 text-center">
-          <a href="#demo" className="btn-primary inline-flex items-center">
-            <Headphones className="mr-2 h-5 w-5" />
-            Try Our Interactive Demo
-          </a>
-        </div>
       </div>
     </section>
   );
