@@ -50,7 +50,7 @@ const NavBar = () => {
               <a
                 key={index}
                 href={link.href}
-                className="text-white hover:text-white/80 transition-colors text-sm font-medium"
+                className="text-white hover:text-white/80 transition-colors text-2xl font-bold"
               >
                 {link.text}
               </a>
@@ -75,7 +75,7 @@ const NavBar = () => {
                 <a
                   key={index}
                   href={link.href}
-                  className="text-white hover:text-white/80 transition-colors py-2"
+                  className="text-white hover:text-white/80 transition-colors py-2 text-2xl font-bold"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.text}
