@@ -18,11 +18,8 @@ const NavBar = () => {
 
   const navLinks = [
     { text: "Home", href: "#" },
-    { text: "Testing", href: "#testing" },
-    { text: "Why Us?", href: "#why-us" },
     { text: "Services", href: "#services" },
-    { text: "Reviews", href: "#reviews" },
-    { text: "Contact", href: "#contact" }
+    { text: "Reviews", href: "#reviews" }
   ];
 
   return (
