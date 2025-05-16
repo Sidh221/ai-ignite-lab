@@ -1,4 +1,5 @@
-import { Facebook, Twitter, Linkedin, Instagram, Bot, Send, Mail, Phone, MapPin } from "lucide-react";
+
+import { Facebook, Twitter, Linkedin, Instagram, Bot, Send, Mail, Phone, MapPin, Home } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -9,14 +10,14 @@ const Footer = () => {
             <div className="flex items-center gap-2 text-2xl font-bold bg-gradient-to-r from-steel to-violet bg-clip-text text-transparent mb-4">
               <img 
                 src="/lovable-uploads/1bc8889e-a10c-4871-a599-1439a4d03d9d.png" 
-                alt="Innovara AI Logo" 
+                alt="FutureForm AI Logo" 
                 className="h-8 w-auto" 
               />
-              Innovara AI
+              FutureForm Ai
             </div>
             <p className="text-white/70">
               Transforming customer interactions with intelligent AI Voice agents 
-              for restaurants, hotels, and medical facilities.
+              for restaurants, hotels, medical facilities, and real estate.
             </p>
             <div className="flex space-x-4 mt-6">
               <a
@@ -75,6 +76,14 @@ const Footer = () => {
               </li>
               <li>
                 <a
+                  href="#industries"
+                  className="text-white/70 hover:text-white transition-colors flex items-center"
+                >
+                  <span className="mr-2">•</span>Real Estate Voice AI
+                </a>
+              </li>
+              <li>
+                <a
                   href="#features"
                   className="text-white/70 hover:text-white transition-colors flex items-center"
                 >
@@ -127,7 +136,7 @@ const Footer = () => {
             <ul className="space-y-4 text-white/70">
               <li className="flex items-start">
                 <Mail className="mr-3 h-5 w-5 text-cyclamen flex-shrink-0 mt-0.5" />
-                <span>info@voiceai.agency</span>
+                <span>info@futureformai.agency</span>
               </li>
               <li className="flex items-start">
                 <Phone className="mr-3 h-5 w-5 text-steel flex-shrink-0 mt-0.5" />
@@ -156,7 +165,7 @@ const Footer = () => {
         
         <div className="border-t border-white/10 pt-8 text-center text-white/50 text-sm">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p>&copy; 2024 Innovara AI. All rights reserved.</p>
+            <p>&copy; 2024 FutureForm Ai. All rights reserved.</p>
             <div className="flex space-x-4 mt-4 md:mt-0">
               <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
               <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
