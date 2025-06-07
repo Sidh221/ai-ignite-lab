@@ -93,6 +93,16 @@ export default {
           "60%": { transform: "rotate(0.0deg)" },
           "100%": { transform: "rotate(0.0deg)" },
         },
+        spotlight: {
+          "0%": {
+            opacity: "0",
+            transform: "translate(-72%, -62%) scale(0.5)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translate(-50%,-40%) scale(1)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -102,6 +112,7 @@ export default {
         "fade-in-up": "fade-in-up 0.7s ease-out",
         "pulse-slow": "pulse-slow 3s infinite ease-in-out",
         wave: "wave 2.5s ease-in-out infinite",
+        spotlight: "spotlight 2s ease .75s 1 forwards",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
