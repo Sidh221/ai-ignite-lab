@@ -37,7 +37,7 @@ const BookingCalendar = () => {
   };
 
   return (
-    <div className="glass-card rounded-2xl p-6 mt-8">
+    <div id="booking-calendar" className="glass-card rounded-2xl p-6 mt-8">
       <div className="flex items-center mb-6">
         <CalendarIcon className="w-6 h-6 mr-2 text-violet" />
         <h3 className="text-xl font-semibold">Book an Appointment</h3>

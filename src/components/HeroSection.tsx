@@ -44,7 +44,7 @@ const HeroSection = () => {
                 Precision meets progress through intelligent efficiency
               </p>
               <a
-                href="#contact"
+                href="#booking-calendar"
                 className="bg-gradient-steel-violet px-8 py-4 rounded-md text-lg font-semibold hover:bg-gradient-steel-cyclamen transition-colors inline-block text-white hover:shadow-lg hover:shadow-violet/30 transform hover:-translate-y-1 duration-300"
               >
                 Get Started Today
