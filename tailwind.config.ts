@@ -105,9 +105,9 @@ export default {
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-steel-violet": "linear-gradient(90deg, #B85ABD 0%, #8547E9 100%)",
-        "gradient-steel-cyclamen": "linear-gradient(90deg, #B85ABD 0%, #E86C94 100%)",
-        "gradient-violet-cyclamen": "linear-gradient(90deg, #8547E9 0%, #E86C94 100%)",
+        "gradient-steel-violet": "linear-gradient(90deg, #5E3B9F 0%, #4E2A84 100%)",
+        "gradient-steel-cyclamen": "linear-gradient(90deg, #5E3B9F 0%, #8547E9 100%)",
+        "gradient-violet-cyclamen": "linear-gradient(90deg, #4E2A84 0%, #8547E9 100%)",
       },
       fontFamily: {
         sans: ['Nunito Sans', 'Inter', 'Luxora Grotesk', 'Poppins', 'sans-serif'],
