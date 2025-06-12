@@ -35,7 +35,7 @@
   }
 
   body {
-    @apply bg-black text-foreground antialiased min-h-screen;
+    @apply bg-black text-white antialiased min-h-screen;
     font-family: 'Nunito Sans', 'Inter', 'Luxora Grotesk', 'Poppins', sans-serif;
     font-weight: 400;
     letter-spacing: -0.015em;
@@ -123,8 +123,8 @@
 .loader {
   width: 48px;
   height: 48px;
-  border: 5px solid #FFF3;
-  border-bottom-color: #FF3D00;
+  border: 5px solid rgba(255, 255, 255, 0.1);
+  border-bottom-color: #ffffff;
   border-radius: 50%;
   display: inline-block;
   animation: rotation 1s linear infinite;
