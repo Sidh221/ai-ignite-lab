@@ -1,4 +1,3 @@
-
 import * as React from "react";
 import { useState } from "react";
 import { format } from "date-fns";
@@ -39,20 +38,20 @@ const BookingCalendar = () => {
   return (
     <div id="booking-calendar" className="glass-card rounded-2xl p-6 mt-8">
       <div className="flex items-center mb-6">
-        <CalendarIcon className="w-6 h-6 mr-2 text-violet" />
+        <CalendarIcon className="w-6 h-6 mr-2 text-blue-400" />
         <h3 className="text-xl font-semibold">Book an Appointment</h3>
       </div>
       
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div>
           <p className="text-white/80 mb-4">Select a date for your consultation:</p>
-          <div className="bg-navy/30 p-4 rounded-lg">
+          <div className="bg-gray-800/30 p-4 rounded-lg">
             <Calendar
               mode="single"
               selected={date}
               onSelect={setDate}
               disabled={(date) => date < new Date() || date > new Date(new Date().setMonth(new Date().getMonth() + 2))}
-              className="bg-black/30 rounded-lg"
+              className="bg-gray-900/30 rounded-lg"
             />
           </div>
         </div>
@@ -64,7 +63,7 @@ const BookingCalendar = () => {
               type="text"
               value={bookingName}
               onChange={(e) => setBookingName(e.target.value)}
-              className="w-full px-4 py-3 rounded-lg glass focus:outline-none focus:ring-2 focus:ring-violet border border-white/10 bg-navy/20"
+              className="w-full px-4 py-3 rounded-lg glass focus:outline-none focus:ring-2 focus:ring-blue-400 border border-white/10 bg-gray-800/20"
               placeholder="Enter your name"
             />
           </div>
@@ -75,7 +74,7 @@ const BookingCalendar = () => {
               type="email"
               value={bookingEmail}
               onChange={(e) => setBookingEmail(e.target.value)}
-              className="w-full px-4 py-3 rounded-lg glass focus:outline-none focus:ring-2 focus:ring-violet border border-white/10 bg-navy/20"
+              className="w-full px-4 py-3 rounded-lg glass focus:outline-none focus:ring-2 focus:ring-blue-400 border border-white/10 bg-gray-800/20"
               placeholder="Enter your email"
             />
           </div>
@@ -90,8 +89,8 @@ const BookingCalendar = () => {
                     className={cn(
                       "px-3 py-2 rounded-md text-sm flex items-center justify-center border",
                       timeSlot === time
-                        ? "bg-violet text-white border-violet"
-                        : "bg-navy/20 text-white/80 border-white/10 hover:bg-navy/40"
+                        ? "bg-blue-500 text-white border-blue-500"
+                        : "bg-gray-800/20 text-white/80 border-white/10 hover:bg-gray-800/40"
                     )}
                     onClick={() => setTimeSlot(time)}
                   >
@@ -106,7 +105,7 @@ const BookingCalendar = () => {
           <Button 
             onClick={handleBookAppointment}
             disabled={!date || !timeSlot || !bookingName || !bookingEmail}
-            className="w-full mt-4 bg-gradient-steel-violet hover:bg-gradient-steel-cyclamen text-white"
+            className="w-full mt-4 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white"
           >
             Book Appointment
           </Button>
