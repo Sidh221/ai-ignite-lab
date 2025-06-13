@@ -44,7 +44,7 @@ const BookingCalendar = () => {
       
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div>
-          <p className="text-white/90 mb-6 text-lg">Select a date for your consultation:</p>
+          <p className="text-white mb-6 text-lg">Select a date for your consultation:</p>
           <div className="bg-black/50 p-6 rounded-xl border border-white/10">
             <Calendar
               mode="single"
@@ -58,7 +58,7 @@ const BookingCalendar = () => {
         
         <div>
           <div className="mb-6">
-            <label className="block text-white/90 mb-3 text-lg font-medium">Your Name</label>
+            <label className="block text-white mb-3 text-lg font-medium">Your Name</label>
             <input
               type="text"
               value={bookingName}
@@ -69,7 +69,7 @@ const BookingCalendar = () => {
           </div>
           
           <div className="mb-6">
-            <label className="block text-white/90 mb-3 text-lg font-medium">Your Email</label>
+            <label className="block text-white mb-3 text-lg font-medium">Your Email</label>
             <input
               type="email"
               value={bookingEmail}
@@ -81,7 +81,7 @@ const BookingCalendar = () => {
           
           {date && (
             <div>
-              <p className="text-white/90 mb-4 text-lg">Available time slots for {format(date, "MMMM d, yyyy")}:</p>
+              <p className="text-white mb-4 text-lg">Available time slots for {format(date, "MMMM d, yyyy")}:</p>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-8">
                 {timeSlots.map((time) => (
                   <button
@@ -90,7 +90,7 @@ const BookingCalendar = () => {
                       "px-4 py-3 rounded-xl text-sm flex items-center justify-center border transition-all duration-200",
                       timeSlot === time
                         ? "bg-white text-black border-white font-medium"
-                        : "bg-black/50 text-white/90 border-white/20 hover:bg-white/10 hover:border-white/40"
+                        : "bg-black/50 text-white border-white/20 hover:bg-white/10 hover:border-white/40"
                     )}
                     onClick={() => setTimeSlot(time)}
                   >

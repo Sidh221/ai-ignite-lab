@@ -14,7 +14,7 @@ const Footer = () => {
               />
               <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">NextSynthAi</span>
             </div>
-            <p className="text-gray-300">
+            <p className="text-white">
               Transforming customer interactions with intelligent AI Voice agents 
               for restaurants, hotels, medical facilities, and real estate.
             </p>
@@ -52,7 +52,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#industries"
-                  className="text-gray-400 hover:text-white transition-colors flex items-center"
+                  className="text-white hover:text-white/80 transition-colors flex items-center"
                 >
                   <span className="mr-2">•</span>Restaurant Voice AI
                 </a>
@@ -60,7 +60,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#industries"
-                  className="text-gray-400 hover:text-white transition-colors flex items-center"
+                  className="text-white hover:text-white/80 transition-colors flex items-center"
                 >
                   <span className="mr-2">•</span>Hotel Voice AI
                 </a>
@@ -68,7 +68,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#industries"
-                  className="text-gray-400 hover:text-white transition-colors flex items-center"
+                  className="text-white hover:text-white/80 transition-colors flex items-center"
                 >
                   <span className="mr-2">•</span>Medical Voice AI
                 </a>
@@ -76,7 +76,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#industries"
-                  className="text-gray-400 hover:text-white transition-colors flex items-center"
+                  className="text-white hover:text-white/80 transition-colors flex items-center"
                 >
                   <span className="mr-2">•</span>Real Estate Voice AI
                 </a>
@@ -84,7 +84,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#features"
-                  className="text-gray-400 hover:text-white transition-colors flex items-center"
+                  className="text-white hover:text-white/80 transition-colors flex items-center"
                 >
                   <span className="mr-2">•</span>Custom Solutions
                 </a>
@@ -98,7 +98,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#about"
-                  className="text-gray-400 hover:text-white transition-colors flex items-center"
+                  className="text-white hover:text-white/80 transition-colors flex items-center"
                 >
                   <span className="mr-2">•</span>About Us
                 </a>
@@ -106,7 +106,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#case-studies"
-                  className="text-gray-400 hover:text-white transition-colors flex items-center"
+                  className="text-white hover:text-white/80 transition-colors flex items-center"
                 >
                   <span className="mr-2">•</span>Case Studies
                 </a>
@@ -114,7 +114,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#blog"
-                  className="text-gray-400 hover:text-white transition-colors flex items-center"
+                  className="text-white hover:text-white/80 transition-colors flex items-center"
                 >
                   <span className="mr-2">•</span>Blog
                 </a>
@@ -122,7 +122,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#"
-                  className="text-gray-400 hover:text-white transition-colors flex items-center"
+                  className="text-white hover:text-white/80 transition-colors flex items-center"
                 >
                   <span className="mr-2">•</span>Careers
                 </a>
@@ -132,7 +132,7 @@ const Footer = () => {
           
           <div>
             <h4 className="font-semibold mb-5 text-white">Contact Us</h4>
-            <ul className="space-y-4 text-gray-400">
+            <ul className="space-y-4 text-white">
               <li className="flex items-start">
                 <Mail className="mr-3 h-5 w-5 text-blue-400 flex-shrink-0 mt-0.5" />
                 <span>info@nextsynthai.agency</span>
@@ -162,7 +162,7 @@ const Footer = () => {
           </div>
         </div>
         
-        <div className="border-t border-white/10 pt-8 text-center text-gray-400 text-sm">
+        <div className="border-t border-white/10 pt-8 text-center text-white text-sm">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p>&copy; 2024 NextSynthAi. All rights reserved.</p>
             <div className="flex space-x-4 mt-4 md:mt-0">
