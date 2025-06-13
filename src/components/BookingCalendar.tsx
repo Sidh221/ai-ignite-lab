@@ -36,61 +36,61 @@ const BookingCalendar = () => {
   };
 
   return (
-    <div id="booking-calendar" className="bg-gradient-to-b from-gray-900 to-black rounded-2xl p-6 mt-8 border border-white/10">
-      <div className="flex items-center mb-6">
-        <CalendarIcon className="w-6 h-6 mr-2 text-blue-400" />
-        <h3 className="text-xl font-semibold text-white">Book an Appointment</h3>
+    <div id="booking-calendar" className="bg-black rounded-2xl p-8 mt-8 border border-white/10">
+      <div className="flex items-center mb-8">
+        <CalendarIcon className="w-6 h-6 mr-3 text-white" />
+        <h3 className="text-2xl font-bold text-white">Book an Appointment</h3>
       </div>
       
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div>
-          <p className="text-white/80 mb-4">Select a date for your consultation:</p>
-          <div className="bg-gray-800/30 p-4 rounded-lg">
+          <p className="text-white/90 mb-6 text-lg">Select a date for your consultation:</p>
+          <div className="bg-black/50 p-6 rounded-xl border border-white/10">
             <Calendar
               mode="single"
               selected={date}
               onSelect={setDate}
               disabled={(date) => date < new Date() || date > new Date(new Date().setMonth(new Date().getMonth() + 2))}
-              className="bg-gray-900/30 rounded-lg"
+              className="bg-black rounded-xl text-white p-3 pointer-events-auto"
             />
           </div>
         </div>
         
         <div>
-          <div className="mb-4">
-            <label className="block text-white/80 mb-2">Your Name</label>
+          <div className="mb-6">
+            <label className="block text-white/90 mb-3 text-lg font-medium">Your Name</label>
             <input
               type="text"
               value={bookingName}
               onChange={(e) => setBookingName(e.target.value)}
-              className="w-full px-4 py-3 rounded-lg glass focus:outline-none focus:ring-2 focus:ring-blue-400 border border-white/10 bg-gray-800/20"
+              className="w-full px-4 py-3 rounded-xl bg-black/50 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-white/30 focus:border-transparent"
               placeholder="Enter your name"
             />
           </div>
           
-          <div className="mb-4">
-            <label className="block text-white/80 mb-2">Your Email</label>
+          <div className="mb-6">
+            <label className="block text-white/90 mb-3 text-lg font-medium">Your Email</label>
             <input
               type="email"
               value={bookingEmail}
               onChange={(e) => setBookingEmail(e.target.value)}
-              className="w-full px-4 py-3 rounded-lg glass focus:outline-none focus:ring-2 focus:ring-blue-400 border border-white/10 bg-gray-800/20"
+              className="w-full px-4 py-3 rounded-xl bg-black/50 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-white/30 focus:border-transparent"
               placeholder="Enter your email"
             />
           </div>
           
           {date && (
             <div>
-              <p className="text-white/80 mb-3">Available time slots for {format(date, "MMMM d, yyyy")}:</p>
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 mb-6">
+              <p className="text-white/90 mb-4 text-lg">Available time slots for {format(date, "MMMM d, yyyy")}:</p>
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-8">
                 {timeSlots.map((time) => (
                   <button
                     key={time}
                     className={cn(
-                      "px-3 py-2 rounded-md text-sm flex items-center justify-center border",
+                      "px-4 py-3 rounded-xl text-sm flex items-center justify-center border transition-all duration-200",
                       timeSlot === time
-                        ? "bg-blue-500 text-white border-blue-500"
-                        : "bg-gray-800/20 text-white/80 border-white/10 hover:bg-gray-800/40"
+                        ? "bg-white text-black border-white font-medium"
+                        : "bg-black/50 text-white/90 border-white/20 hover:bg-white/10 hover:border-white/40"
                     )}
                     onClick={() => setTimeSlot(time)}
                   >
@@ -105,9 +105,9 @@ const BookingCalendar = () => {
           <Button 
             onClick={handleBookAppointment}
             disabled={!date || !timeSlot || !bookingName || !bookingEmail}
-            className="w-full mt-4 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white"
+            className="w-full mt-6 bg-white text-black hover:bg-white/90 text-lg font-semibold py-4 rounded-xl transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            Book Appointment
+            Get Started Today
           </Button>
         </div>
       </div>

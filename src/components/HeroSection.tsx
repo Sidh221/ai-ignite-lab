@@ -5,9 +5,9 @@ import { Spotlight } from "@/components/ui/spotlight";
 
 const HeroSection = () => {
   return (
-    <section className="min-h-[100vh] py-20 flex items-center justify-center relative overflow-hidden bg-gradient-to-b from-gray-900 to-black">
+    <section className="min-h-[100vh] py-20 flex items-center justify-center relative overflow-hidden bg-black">
       {/* Dark gradient background matching the image */}
-      <div className="absolute inset-0 bg-gradient-to-b from-gray-800/20 to-black z-0"></div>
+      <div className="absolute inset-0 bg-black z-0"></div>
       
       <div className="container mx-auto px-4 relative z-10">
         <Card className="w-full h-[80vh] bg-black/[0.96] relative overflow-hidden border-white/10">
