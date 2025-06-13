@@ -36,10 +36,10 @@ const BookingCalendar = () => {
   };
 
   return (
-    <div id="booking-calendar" className="glass-card rounded-2xl p-6 mt-8">
+    <div id="booking-calendar" className="bg-gradient-to-b from-gray-900 to-black rounded-2xl p-6 mt-8 border border-white/10">
       <div className="flex items-center mb-6">
         <CalendarIcon className="w-6 h-6 mr-2 text-blue-400" />
-        <h3 className="text-xl font-semibold">Book an Appointment</h3>
+        <h3 className="text-xl font-semibold text-white">Book an Appointment</h3>
       </div>
       
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
