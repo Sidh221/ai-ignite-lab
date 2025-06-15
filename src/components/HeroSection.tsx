@@ -1,6 +1,6 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Suspense } from "react";
-import GlowingOrb from "./GlowingOrb";
+import Robot3D from "./Robot3D";
 
 const HeroSection = () => {
   const { ref, inView } = useScrollAnimation();
@@ -78,7 +78,7 @@ const HeroSection = () => {
                   <div className="w-64 h-64 rounded-full bg-gradient-to-r from-blue/20 to-pink/20 animate-pulse"></div>
                 </div>
               }>
-                <GlowingOrb />
+                <Robot3D />
               </Suspense>
               
               {/* Floating particles around the orb */}
