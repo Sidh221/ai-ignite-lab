@@ -1,34 +1,50 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Suspense } from "react";
-import Robot3D from "./Robot3D";
+import Volcano3D from "./Volcano3D";
 
 const HeroSection = () => {
   const { ref, inView } = useScrollAnimation();
 
   return (
-    <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-[#0A0E27] via-[#1a1f3a] to-black" ref={ref}>
+    <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-[#1a0a0a] via-[#2d1515] to-black" ref={ref}>
       {/* Animated background particles and geometric shapes */}
       <div className="absolute inset-0">
-        {/* Large background gradient blobs */}
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-[#8B5FBF]/30 to-[#C147E9]/30 rounded-full filter blur-[120px] animate-pulse-slow"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-gradient-to-r from-[#00D4FF]/25 to-[#39FF14]/25 rounded-full filter blur-[150px] animate-float"></div>
+        {/* Large volcanic glow blobs */}
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-[#FF4500]/30 to-[#FF0000]/30 rounded-full filter blur-[120px] animate-pulse-slow"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-gradient-to-r from-[#DC143C]/25 to-[#8B0000]/25 rounded-full filter blur-[150px] animate-float"></div>
         
-        {/* Floating geometric shapes */}
-        <div className="absolute top-20 left-20 w-8 h-8 border-2 border-[#00D4FF]/50 rotate-45 animate-geometric-spin"></div>
-        <div className="absolute top-40 right-32 w-6 h-6 bg-[#39FF14]/40 rounded-full animate-particle-float"></div>
-        <div className="absolute bottom-32 left-16 w-10 h-10 border border-[#8B5FBF]/60 animate-geometric-spin" style={{animationDelay: '2s'}}></div>
-        <div className="absolute top-60 right-60 w-4 h-4 bg-[#C147E9]/50 animate-particle-float" style={{animationDelay: '1s'}}></div>
+        {/* Floating embers and volcanic particles */}
+        <div className="absolute top-20 left-20 w-8 h-8 bg-[#FF4500]/60 rounded-full animate-ember-rise"></div>
+        <div className="absolute top-40 right-32 w-6 h-6 bg-[#FF0000]/70 rounded-full animate-volcanic-eruption"></div>
+        <div className="absolute bottom-32 left-16 w-10 h-10 bg-[#DC143C]/50 rounded-full animate-ember-rise" style={{animationDelay: '2s'}}></div>
+        <div className="absolute top-60 right-60 w-4 h-4 bg-[#FF6347]/60 animate-volcanic-eruption" style={{animationDelay: '1s'}}></div>
         
-        {/* Animated particles */}
-        {[...Array(12)].map((_, i) => (
+        {/* Volcanic ash particles */}
+        {[...Array(15)].map((_, i) => (
           <div
-            key={`particle-${i}`}
-            className="absolute w-1 h-1 bg-[#00D4FF]/60 rounded-full animate-particle-float"
+            key={`ash-particle-${i}`}
+            className="absolute w-1.5 h-1.5 bg-[#FF4500]/70 rounded-full animate-ember-rise"
             style={{
-              left: `${10 + (i % 4) * 25}%`,
-              top: `${15 + (i % 3) * 30}%`,
-              animationDelay: `${i * 0.5}s`,
-              animationDuration: `${4 + (i % 3)}s`
+              left: `${5 + (i % 5) * 20}%`,
+              top: `${10 + (i % 4) * 25}%`,
+              animationDelay: `${i * 0.3}s`,
+              animationDuration: `${3 + (i % 3)}s`,
+              boxShadow: '0 0 10px #FF4500'
+            }}
+          ></div>
+        ))}
+        
+        {/* Lava flow effects */}
+        {[...Array(8)].map((_, i) => (
+          <div
+            key={`lava-${i}`}
+            className="absolute w-3 h-8 bg-gradient-to-t from-[#FF0000]/80 to-transparent animate-lava-flow"
+            style={{
+              left: `${15 + (i % 3) * 30}%`,
+              bottom: `${5 + (i % 2) * 10}%`,
+              animationDelay: `${i * 0.7}s`,
+              borderRadius: '0 0 50% 50%',
+              filter: 'blur(1px)'
             }}
           ></div>
         ))}
@@ -70,42 +86,42 @@ const HeroSection = () => {
             
           </div>
           
-          {/* Right side - 3D Glowing Orb */}
+          {/* Right side - 3D Volcanic Eruption */}
           <div className={`lg:w-1/2 lg:pl-12 transition-all duration-1000 delay-300 ${inView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
             <div className="relative h-[500px] lg:h-[600px]">
               <Suspense fallback={
                 <div className="flex items-center justify-center h-full">
-                  <div className="w-64 h-64 rounded-full bg-gradient-to-r from-blue/20 to-pink/20 animate-pulse"></div>
+                  <div className="w-64 h-64 rounded-full bg-gradient-to-r from-[#FF4500]/20 to-[#FF0000]/20 animate-pulse"></div>
                 </div>
               }>
-                <Robot3D />
+                <Volcano3D />
               </Suspense>
               
-              {/* Floating particles around the orb */}
+              {/* Floating volcanic particles around the volcano */}
               <div className="absolute inset-0 pointer-events-none">
                 {[...Array(8)].map((_, i) => (
                   <div
-                    key={`orb-particle-${i}`}
-                    className="absolute w-2 h-2 bg-blue/60 rounded-full animate-particle-float"
+                    key={`volcano-ember-${i}`}
+                    className="absolute w-2 h-2 bg-[#FF4500]/80 rounded-full animate-ember-rise"
                     style={{
                       left: `${20 + (i % 3) * 25}%`,
                       top: `${15 + (i % 4) * 20}%`,
                       animationDelay: `${i * 0.8}s`,
-                      animationDuration: `${6 + (i % 3)}s`,
-                      boxShadow: '0 0 15px #4F46E5'
+                      animationDuration: `${4 + (i % 3)}s`,
+                      boxShadow: '0 0 15px #FF4500'
                     }}
                   ></div>
                 ))}
                 {[...Array(6)].map((_, i) => (
                   <div
-                    key={`orb-particle-pink-${i}`}
-                    className="absolute w-1.5 h-1.5 bg-pink/60 rounded-full animate-particle-float"
+                    key={`volcano-spark-${i}`}
+                    className="absolute w-1.5 h-1.5 bg-[#FF0000]/80 rounded-full animate-volcanic-eruption"
                     style={{
                       left: `${30 + (i % 4) * 20}%`,
                       top: `${25 + (i % 3) * 25}%`,
                       animationDelay: `${i * 1.2}s`,
-                      animationDuration: `${7 + (i % 2)}s`,
-                      boxShadow: '0 0 12px #EC4899'
+                      animationDuration: `${3 + (i % 2)}s`,
+                      boxShadow: '0 0 12px #FF0000'
                     }}
                   ></div>
                 ))}

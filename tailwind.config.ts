@@ -52,14 +52,14 @@ export default {
           dark: "#7C3AED"
         },
         blue: {
-          DEFAULT: "#4F46E5",
-          light: "#818CF8",
-          dark: "#3730A3"
+          DEFAULT: "#FF4500",
+          light: "#FF6347",
+          dark: "#DC143C"
         },
         pink: {
-          DEFAULT: "#EC4899",
-          light: "#F472B6",
-          dark: "#BE185D"
+          DEFAULT: "#FF0000",
+          light: "#FF69B4",
+          dark: "#8B0000"
         }
       },
       borderRadius: {
@@ -127,6 +127,20 @@ export default {
           "50%": { transform: "rotate(180deg) scale(1.1)" },
           "100%": { transform: "rotate(360deg) scale(1)" }
         },
+        "volcanic-eruption": {
+          "0%": { transform: "translateY(100px) scale(0.5)", opacity: "0" },
+          "50%": { transform: "translateY(-50px) scale(1.2)", opacity: "1" },
+          "100%": { transform: "translateY(-200px) scale(0.8)", opacity: "0" }
+        },
+        "lava-flow": {
+          "0%": { transform: "scaleY(0) translateY(0)", opacity: "1" },
+          "50%": { transform: "scaleY(1) translateY(0)", opacity: "0.8" },
+          "100%": { transform: "scaleY(1.5) translateY(20px)", opacity: "0" }
+        },
+        "ember-rise": {
+          "0%": { transform: "translateY(0) rotate(0deg)", opacity: "1" },
+          "100%": { transform: "translateY(-300px) rotate(360deg)", opacity: "0" }
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -140,13 +154,17 @@ export default {
         "gradient-text": "gradient-text 3s ease infinite",
         "particle-float": "particle-float 6s ease-in-out infinite",
         "geometric-spin": "geometric-spin 8s linear infinite",
+        "volcanic-eruption": "volcanic-eruption 3s ease-out infinite",
+        "lava-flow": "lava-flow 4s ease-in-out infinite",
+        "ember-rise": "ember-rise 5s linear infinite",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-blue-pink": "linear-gradient(90deg, #4F46E5 0%, #EC4899 100%)",
-        "gradient-steel-violet": "linear-gradient(90deg, #4F46E5 0%, #8B5CF6 100%)",
-        "gradient-steel-cyclamen": "linear-gradient(90deg, #4F46E5 0%, #EC4899 100%)",
-        "gradient-violet-cyclamen": "linear-gradient(90deg, #8B5CF6 0%, #EC4899 100%)",
+        "gradient-blue-pink": "linear-gradient(90deg, #FF4500 0%, #FF0000 100%)",
+        "gradient-steel-violet": "linear-gradient(90deg, #FF4500 0%, #DC143C 100%)",
+        "gradient-steel-cyclamen": "linear-gradient(90deg, #FF4500 0%, #FF0000 100%)",
+        "gradient-violet-cyclamen": "linear-gradient(90deg, #DC143C 0%, #FF0000 100%)",
+        "volcanic-gradient": "radial-gradient(circle, #FF4500 0%, #FF0000 50%, #8B0000 100%)",
       },
       fontFamily: {
         sans: ['Inter', 'Nunito Sans', 'Luxora Grotesk', 'Poppins', 'sans-serif'],
