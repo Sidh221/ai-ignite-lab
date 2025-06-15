@@ -16,7 +16,10 @@ const NavBar = () => {
   }, []);
 
   const navLinks = [
-    { text: "Home", href: "#" }
+    { text: "Projects", href: "#projects" },
+    { text: "Skills", href: "#skills" },
+    { text: "About", href: "#about" },
+    { text: "Contact", href: "#contact" }
   ];
 
   return (
@@ -29,34 +32,25 @@ const NavBar = () => {
     >
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
-          <Link
-            to="/"
-            className="flex items-center gap-2 text-2xl font-bold text-white"
-          >
-            <div className="bg-gradient-to-br from-blue-500/40 to-purple-600/40 rounded-full p-1.5 backdrop-blur-sm animate-pulse-slow">
-              <img 
-                src="/lovable-uploads/03c35b9e-6e1b-4c45-8c26-28aa8bc436a1.png" 
-                alt="NextSynthAi Logo" 
-                className="h-9 w-auto brightness-110 contrast-110" 
-              />
-            </div>
-            <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">NextSynthAi</span>
-          </Link>
+          <div className="flex items-center">
+            <svg className="h-8 w-8 text-indigo-400" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path>
+            </svg>
+            <span className="ml-3 text-xl tracking-tight">Your Name</span>
+          </div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex space-x-10 text-sm text-gray-300">
             {navLinks.map((link, index) => (
               <a
                 key={index}
                 href={link.href}
-                className="text-white hover:text-white/80 transition-colors text-2xl font-bold relative group"
+                className="hover:text-white transition-colors"
               >
-                <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">{link.text}</span>
-                <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-gradient-to-r from-blue-400 to-purple-600 group-hover:w-full transition-all duration-300"></span>
+                {link.text}
               </a>
             ))}
           </div>
-
+          
           {/* Mobile Menu Button */}
           <button
             className="md:hidden text-white"
@@ -65,6 +59,12 @@ const NavBar = () => {
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
+          
+          <div className="hidden md:block">
+            <a href="#contact" className="text-sm border border-gray-700 rounded-md px-4 py-2 hover:bg-white/5 transition-all">
+              Get in Touch
+            </a>
+          </div>
         </div>
 
         {/* Mobile Menu */}
@@ -75,10 +75,10 @@ const NavBar = () => {
                 <a
                   key={index}
                   href={link.href}
-                  className="text-white hover:text-white/80 transition-colors py-2 text-2xl font-bold"
+                  className="text-white hover:text-white/80 transition-colors py-2"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">{link.text}</span>
+                  {link.text}
                 </a>
               ))}
             </div>

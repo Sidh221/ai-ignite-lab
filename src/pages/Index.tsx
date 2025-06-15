@@ -9,6 +9,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-black text-white overflow-hidden">
       <NavBar />
+      <div className="h-px bg-gradient-to-r from-transparent via-gray-800 to-transparent"></div>
       <HeroSection />
       <WhatWeDoSection />
       <BookingCalendar />
