@@ -29,7 +29,7 @@ const NavBar = () => {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
           <div className="flex items-center">
-            <img src="/lovable-uploads/3dd70e90-927f-4504-840a-a044bc9c7860.png" alt="NextSynnThai Logo" className="h-8 w-8" />
+            <img src="/lovable-uploads/eaeeb697-8b99-4112-afd6-4505cd6b357d.png" alt="NextSynthAi Logo" className="h-8 w-8" />
             <span className="ml-3 text-xl tracking-tight font-inter font-bold text-white">NextsynthAi</span>
           </div>
 
