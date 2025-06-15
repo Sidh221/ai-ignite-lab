@@ -1,5 +1,5 @@
 
-import { UtensilsCrossed, Building2, Stethoscope, ArrowRight, Sparkles } from "lucide-react";
+import { UtensilsCrossed, Building2, Stethoscope, ArrowRight, Sparkles, Home } from "lucide-react";
 
 const niches = [
   {
@@ -41,6 +41,19 @@ const niches = [
     ],
     gradient: "from-violet to-cyclamen",
   },
+  {
+    icon: Home,
+    title: "Real Estate",
+    description:
+      "Our AI Voice agents help schedule property viewings, answer questions about listings, and provide neighborhood information to potential buyers and renters.",
+    benefits: [
+      "Handle property inquiries 24/7",
+      "Qualify leads more efficiently",
+      "Provide instant property details",
+      "Schedule viewings automatically"
+    ],
+    gradient: "from-cyclamen to-violet",
+  },
 ];
 
 const NichesSection = () => {
@@ -66,7 +79,7 @@ const NichesSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {niches.map((niche, index) => (
             <div
               key={index}

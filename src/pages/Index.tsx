@@ -1,23 +1,18 @@
 
 import NavBar from "@/components/NavBar";
 import HeroSection from "@/components/HeroSection";
-import AboutSection from "@/components/AboutSection";
-import NichesSection from "@/components/NichesSection";
-import FeaturesSection from "@/components/FeaturesSection";
-import FAQSection from "@/components/FAQSection";
-import ContactSection from "@/components/ContactSection";
+import WhatWeDoSection from "@/components/WhatWeDoSection";
+import BookingCalendar from "@/components/BookingCalendar";
 import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-black text-white overflow-hidden">
       <NavBar />
+      <div className="h-px bg-gradient-to-r from-transparent via-gray-800 to-transparent"></div>
       <HeroSection />
-      <AboutSection />
-      <NichesSection />
-      <FeaturesSection />
-      <FAQSection />
-      <ContactSection />
+      <WhatWeDoSection />
+      <BookingCalendar />
       <Footer />
     </div>
   );

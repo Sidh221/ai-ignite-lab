@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -32,25 +31,25 @@ export default {
         lavender: "#E6E7F1",
         accent: "#AD484E",
         primary: {
-          DEFAULT: "#8B5CF6",
-          hover: "#7C3AED",
-        },
-        secondary: {
           DEFAULT: "#3B82F6",
           hover: "#2563EB",
+        },
+        secondary: {
+          DEFAULT: "#8B5CF6",
+          hover: "#7C3AED",
         },
         dark: {
           DEFAULT: "#090817",
           light: "#1E215C",
         },
-        steel: "#5E3B9F",
-        cyclamen: "#8547E9",
-        violet: "#4E2A84",
+        steel: "#3B82F6",
+        cyclamen: "#8B5CF6",
+        violet: "#6366F1",
         black: "#000101",
         purple: {
-          DEFAULT: "#4E2A84", 
-          light: "#6B40B0",
-          dark: "#3A1F62"
+          DEFAULT: "#8B5CF6", 
+          light: "#A78BFA",
+          dark: "#7C3AED"
         }
       },
       borderRadius: {
@@ -93,6 +92,16 @@ export default {
           "60%": { transform: "rotate(0.0deg)" },
           "100%": { transform: "rotate(0.0deg)" },
         },
+        spotlight: {
+          "0%": {
+            opacity: "0",
+            transform: "translate(-72%, -62%) scale(0.5)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translate(-50%,-40%) scale(1)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -102,12 +111,13 @@ export default {
         "fade-in-up": "fade-in-up 0.7s ease-out",
         "pulse-slow": "pulse-slow 3s infinite ease-in-out",
         wave: "wave 2.5s ease-in-out infinite",
+        spotlight: "spotlight 2s ease .75s 1 forwards",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-steel-violet": "linear-gradient(90deg, #B85ABD 0%, #8547E9 100%)",
-        "gradient-steel-cyclamen": "linear-gradient(90deg, #B85ABD 0%, #E86C94 100%)",
-        "gradient-violet-cyclamen": "linear-gradient(90deg, #8547E9 0%, #E86C94 100%)",
+        "gradient-steel-violet": "linear-gradient(90deg, #3B82F6 0%, #6366F1 100%)",
+        "gradient-steel-cyclamen": "linear-gradient(90deg, #3B82F6 0%, #8B5CF6 100%)",
+        "gradient-violet-cyclamen": "linear-gradient(90deg, #6366F1 0%, #8B5CF6 100%)",
       },
       fontFamily: {
         sans: ['Nunito Sans', 'Inter', 'Luxora Grotesk', 'Poppins', 'sans-serif'],
