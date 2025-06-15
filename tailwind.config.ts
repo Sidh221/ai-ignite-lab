@@ -31,25 +31,35 @@ export default {
         lavender: "#E6E7F1",
         accent: "#AD484E",
         primary: {
-          DEFAULT: "#3B82F6",
-          hover: "#2563EB",
+          DEFAULT: "#4F46E5",
+          hover: "#4338CA",
         },
         secondary: {
-          DEFAULT: "#8B5CF6",
-          hover: "#7C3AED",
+          DEFAULT: "#EC4899",
+          hover: "#DB2777",
         },
         dark: {
           DEFAULT: "#090817",
           light: "#1E215C",
         },
-        steel: "#3B82F6",
-        cyclamen: "#8B5CF6",
-        violet: "#6366F1",
+        steel: "#4F46E5",
+        cyclamen: "#EC4899",
+        violet: "#8B5CF6",
         black: "#000101",
         purple: {
           DEFAULT: "#8B5CF6", 
           light: "#A78BFA",
           dark: "#7C3AED"
+        },
+        blue: {
+          DEFAULT: "#4F46E5",
+          light: "#818CF8",
+          dark: "#3730A3"
+        },
+        pink: {
+          DEFAULT: "#EC4899",
+          light: "#F472B6",
+          dark: "#BE185D"
         }
       },
       borderRadius: {
@@ -133,9 +143,10 @@ export default {
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-steel-violet": "linear-gradient(90deg, #3B82F6 0%, #6366F1 100%)",
-        "gradient-steel-cyclamen": "linear-gradient(90deg, #3B82F6 0%, #8B5CF6 100%)",
-        "gradient-violet-cyclamen": "linear-gradient(90deg, #6366F1 0%, #8B5CF6 100%)",
+        "gradient-blue-pink": "linear-gradient(90deg, #4F46E5 0%, #EC4899 100%)",
+        "gradient-steel-violet": "linear-gradient(90deg, #4F46E5 0%, #8B5CF6 100%)",
+        "gradient-steel-cyclamen": "linear-gradient(90deg, #4F46E5 0%, #EC4899 100%)",
+        "gradient-violet-cyclamen": "linear-gradient(90deg, #8B5CF6 0%, #EC4899 100%)",
       },
       fontFamily: {
         sans: ['Inter', 'Nunito Sans', 'Luxora Grotesk', 'Poppins', 'sans-serif'],
