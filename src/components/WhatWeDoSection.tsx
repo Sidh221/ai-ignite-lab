@@ -9,7 +9,7 @@ const WhatWeDoSection = () => {
       
       <div className="container mx-auto px-6 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-20">
+        <div className="text-center mb-20" id="services">
           <h2 className="text-6xl md:text-7xl font-bold text-white mb-8 leading-tight tracking-tight">
             Our <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#00D4FF] to-[#8B5FBF]">AI Solutions</span>
           </h2>
@@ -19,7 +19,7 @@ const WhatWeDoSection = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
           {/* Intelligent Automation Systems */}
           <div className="group relative">
             <div className="glass-card rounded-3xl p-10 h-full border border-[#00D4FF]/20 shadow-2xl hover:shadow-[#00D4FF]/30 transition-all duration-500 hover:scale-105 hover:border-[#00D4FF]/40">
@@ -78,7 +78,7 @@ const WhatWeDoSection = () => {
                 </div>
                 
                 <div className="glass border border-[#C147E9]/30 rounded-2xl px-6 py-4 hover:bg-[#C147E9]/10 transition-all duration-300">
-                  <h4 className="text-[#C147E9] text-lg font-semibold mb-2">Data-Driven Strategic Marketing</h4>
+                  <h4 className="text-[#C147E9] text-lg font-semibold mb-2">Data-Driven Insights for Strategic Marketing</h4>
                   <p className="text-gray-300 text-sm">Comprehensive market analysis for strategic campaign development</p>
                 </div>
                 
@@ -94,48 +94,10 @@ const WhatWeDoSection = () => {
               </div>
             </div>
           </div>
-
-          {/* Social Media AI Systems */}
-          <div className="group relative">
-            <div className="glass-card rounded-3xl p-10 h-full border border-[#39FF14]/20 shadow-2xl hover:shadow-[#39FF14]/30 transition-all duration-500 hover:scale-105 hover:border-[#39FF14]/40">
-              <div className="absolute top-6 right-6 w-16 h-16 bg-gradient-to-r from-[#39FF14] to-[#00D4FF] rounded-2xl flex items-center justify-center opacity-80">
-                <div className="w-8 h-8 border-2 border-white rounded-xl relative">
-                  <div className="absolute inset-1 bg-white rounded opacity-60"></div>
-                  <div className="absolute top-0.5 right-0.5 w-2 h-2 bg-[#39FF14] rounded-full"></div>
-                </div>
-              </div>
-              
-              <h3 className="text-4xl font-bold text-white mb-8 tracking-wide">
-                Social Media AI Systems
-              </h3>
-              
-              <div className="space-y-6">
-                <div className="glass border border-[#39FF14]/30 rounded-2xl px-6 py-4 hover:bg-[#39FF14]/10 transition-all duration-300">
-                  <h4 className="text-[#39FF14] text-lg font-semibold mb-2">Content Generation & Scheduling</h4>
-                  <p className="text-gray-300 text-sm">AI-powered content creation and optimal posting schedules</p>
-                </div>
-                
-                <div className="glass border border-[#39FF14]/30 rounded-2xl px-6 py-4 hover:bg-[#39FF14]/10 transition-all duration-300">
-                  <h4 className="text-[#39FF14] text-lg font-semibold mb-2">Engagement Automation</h4>
-                  <p className="text-gray-300 text-sm">Intelligent response systems and community management</p>
-                </div>
-                
-                <div className="glass border border-[#39FF14]/30 rounded-2xl px-6 py-4 hover:bg-[#39FF14]/10 transition-all duration-300">
-                  <h4 className="text-[#39FF14] text-lg font-semibold mb-2">Performance Analytics</h4>
-                  <p className="text-gray-300 text-sm">Advanced social media metrics and ROI tracking</p>
-                </div>
-                
-                <div className="glass border border-[#39FF14]/30 rounded-2xl px-6 py-4 hover:bg-[#39FF14]/10 transition-all duration-300">
-                  <h4 className="text-[#39FF14] text-lg font-semibold mb-2">Cross-Platform Management</h4>
-                  <p className="text-gray-300 text-sm">Unified management across all social media channels</p>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
 
         {/* Key Messaging */}
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8 text-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
           <div className="glass rounded-2xl p-6 border border-[#00D4FF]/20 hover:border-[#00D4FF]/40 transition-all duration-300">
             <div className="text-2xl font-bold text-[#00D4FF] mb-3">Innovation Leader</div>
             <div className="text-gray-400 text-sm">Pioneering next-gen AI automation</div>
@@ -154,11 +116,6 @@ const WhatWeDoSection = () => {
           <div className="glass rounded-2xl p-6 border border-[#8B5FBF]/20 hover:border-[#8B5FBF]/40 transition-all duration-300">
             <div className="text-2xl font-bold text-[#8B5FBF] mb-3">Results-Driven</div>
             <div className="text-gray-400 text-sm">Measurable impact through AI</div>
-          </div>
-          
-          <div className="glass rounded-2xl p-6 border border-[#00D4FF]/20 hover:border-[#00D4FF]/40 transition-all duration-300">
-            <div className="text-2xl font-bold text-[#00D4FF] mb-3">Future-Ready</div>
-            <div className="text-gray-400 text-sm">Building tomorrow's solutions today</div>
           </div>
         </div>
       </div>

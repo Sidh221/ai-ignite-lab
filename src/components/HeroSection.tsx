@@ -15,45 +15,35 @@ const HeroSection = () => {
           {/* Left content */}
           <div className="lg:w-1/2 mb-12 lg:mb-0 lg:pr-12">
             <div className="flex items-center mb-8">
-              <img src="/lovable-uploads/3dd70e90-927f-4504-840a-a044bc9c7860.png" alt="NextSynthAI Logo" className="h-16 w-16 mr-4" />
-              <div className="text-3xl font-bold tracking-tight text-white">NextSynthAI</div>
+              <img src="/lovable-uploads/3dd70e90-927f-4504-840a-a044bc9c7860.png" alt="NextSynnThai Logo" className="h-16 w-16 mr-4" />
+              <div className="text-3xl font-bold tracking-tight text-white">NextSynnThai</div>
             </div>
             
             <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter mb-8 leading-tight">
+              <span className="text-white">Welcome to</span>
+              <br />
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#00D4FF] via-[#8B5FBF] to-[#C147E9] animate-gradient-text">
-                AI Developer
-              </span>
-              <br />
-              <span className="text-white">&</span>
-              <br />
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#39FF14] to-[#00D4FF]">
-                Innovation Specialist
+                NextSynnThai
               </span>
             </h1>
             
             <p className="text-gray-300 text-xl md:text-2xl mb-10 max-w-2xl font-light leading-relaxed">
-              Crafting intelligent solutions through cutting-edge AI development, machine learning, and innovative automation systems.
+              Where artificial intelligence meets limitless possibility. We craft autonomous agents and intelligent automation systems that don't just work for your business, they evolve with it.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6">
               <button 
-                onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
                 className="group relative bg-gradient-to-r from-[#00D4FF] to-[#8B5FBF] text-white font-semibold rounded-xl px-8 py-4 hover:shadow-2xl hover:shadow-[#00D4FF]/30 transition-all duration-300 hover:-translate-y-1"
               >
-                <span className="relative z-10">View Projects</span>
+                <span className="relative z-10">Explore Our Solutions</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-[#8B5FBF] to-[#C147E9] rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </button>
               <button 
-                onClick={() => document.getElementById('skills')?.scrollIntoView({ behavior: 'smooth' })}
-                className="glass border border-[#00D4FF]/30 text-white font-semibold rounded-xl px-8 py-4 hover:bg-[#00D4FF]/10 hover:border-[#00D4FF]/50 transition-all duration-300 hover:-translate-y-1"
-              >
-                Explore Skills
-              </button>
-              <button 
-                onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
                 className="glass border border-[#39FF14]/30 text-white font-semibold rounded-xl px-8 py-4 hover:bg-[#39FF14]/10 hover:border-[#39FF14]/50 transition-all duration-300 hover:-translate-y-1"
               >
-                About Me
+                Get Started Today
               </button>
             </div>
             
