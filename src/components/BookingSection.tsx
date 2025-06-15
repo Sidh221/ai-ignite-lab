@@ -79,7 +79,7 @@ const BookingSection = () => {
               {/* Cal.com embed container */}
               <div className="w-full h-96 rounded-xl overflow-hidden border border-[#8B5FBF]/30">
                 <iframe
-                  src="https://cal.com/your-username/30min"
+                  src="https://cal.com/sudhanshu-rai/30min"
                   className="w-full h-full"
                   style={{
                     border: 'none',
