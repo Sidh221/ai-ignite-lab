@@ -22,15 +22,15 @@ const NavBar = () => {
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         isScrolled
-          ? "py-3 bg-black/90 shadow-md backdrop-blur-lg"
-          : "py-5 bg-black"
+          ? "py-3 bg-blue-grey/90 shadow-md backdrop-blur-lg"
+          : "py-5 bg-blue-grey"
       }`}
     >
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
           <div className="flex items-center">
             <img src="/lovable-uploads/3dd70e90-927f-4504-840a-a044bc9c7860.png" alt="NextSynnThai Logo" className="h-8 w-8" />
-            <span className="ml-3 text-xl tracking-tight font-inter font-bold">NextsynthAi</span>
+            <span className="ml-3 text-xl tracking-tight font-inter font-bold text-white">NextsynthAi</span>
           </div>
 
           {/* Mobile Menu Button */}
@@ -43,7 +43,7 @@ const NavBar = () => {
           </button>
           
           <div className="hidden md:flex items-center space-x-10">
-            <div className="flex space-x-10 text-sm text-gray-300">
+            <div className="flex space-x-10 text-sm text-white/80">
               {navLinks.map((link, index) => (
                 <a
                   key={index}
@@ -65,7 +65,7 @@ const NavBar = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden bg-gray-800 mt-4 rounded-lg p-4 animate-fade-in">
+          <div className="md:hidden bg-blue-grey-light mt-4 rounded-lg p-4 animate-fade-in">
             <div className="flex flex-col space-y-3">
               {navLinks.map((link, index) => (
                 <a
