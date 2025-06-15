@@ -2,7 +2,7 @@
 import NavBar from "@/components/NavBar";
 import HeroSection from "@/components/HeroSection";
 import WhatWeDoSection from "@/components/WhatWeDoSection";
-import BookingCalendar from "@/components/BookingCalendar";
+import CTASection from "@/components/BookingCalendar";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -12,7 +12,7 @@ const Index = () => {
       <div className="h-px bg-gradient-to-r from-transparent via-gray-800 to-transparent"></div>
       <HeroSection />
       <WhatWeDoSection />
-      <BookingCalendar />
+      <CTASection />
       <Footer />
     </div>
   );
