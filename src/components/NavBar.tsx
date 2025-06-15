@@ -42,16 +42,24 @@ const NavBar = () => {
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
           
-          <div className="hidden md:flex space-x-10 text-sm text-gray-300">
-            {navLinks.map((link, index) => (
-              <a
-                key={index}
-                href={link.href}
-                className="hover:text-white transition-colors"
-              >
-                {link.text}
-              </a>
-            ))}
+          <div className="hidden md:flex items-center space-x-10">
+            <div className="flex space-x-10 text-sm text-gray-300">
+              {navLinks.map((link, index) => (
+                <a
+                  key={index}
+                  href={link.href}
+                  className="hover:text-white transition-colors"
+                >
+                  {link.text}
+                </a>
+              ))}
+            </div>
+            <button
+              onClick={() => document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' })}
+              className="bg-gradient-to-r from-[#00D4FF] to-[#8B5FBF] text-white font-semibold rounded-lg px-6 py-2 hover:shadow-lg hover:shadow-[#00D4FF]/50 transition-all duration-300 hover:-translate-y-0.5"
+            >
+              Get In Touch
+            </button>
           </div>
         </div>
 
@@ -68,7 +76,16 @@ const NavBar = () => {
                 >
                   {link.text}
                 </a>
-              ))}
+               ))}
+              <button
+                onClick={() => {
+                  setIsMobileMenuOpen(false);
+                  document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+                className="bg-gradient-to-r from-[#00D4FF] to-[#8B5FBF] text-white font-semibold rounded-lg px-6 py-2 hover:shadow-lg hover:shadow-[#00D4FF]/50 transition-all duration-300"
+              >
+                Get In Touch
+              </button>
             </div>
           </div>
         )}

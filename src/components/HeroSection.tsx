@@ -58,7 +58,7 @@ const HeroSection = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-[#00D4FF] to-[#8B5FBF] rounded-2xl blur-sm opacity-50 group-hover:opacity-70 transition-opacity duration-300"></div>
               </button>
               <button 
-                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' })}
                 className="group glass border-2 border-[#00D4FF]/60 text-white font-bold rounded-2xl px-8 py-4 hover:bg-[#00D4FF]/20 hover:border-[#00D4FF]/100 hover:shadow-2xl hover:shadow-[#00D4FF]/60 transition-all duration-300 hover:-translate-y-1 hover:scale-105 shadow-lg shadow-[#00D4FF]/20"
               >
                 <span className="font-inter">Get Started Today</span>
