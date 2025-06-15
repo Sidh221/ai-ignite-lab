@@ -33,6 +33,15 @@ const NavBar = () => {
             <span className="ml-3 text-xl tracking-tight font-inter font-bold">NextSynnThai</span>
           </div>
 
+          {/* Mobile Menu Button */}
+          <button
+            className="md:hidden text-white"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle mobile menu"
+          >
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+          
           <div className="hidden md:flex space-x-10 text-sm text-gray-300">
             {navLinks.map((link, index) => (
               <a
@@ -43,24 +52,6 @@ const NavBar = () => {
                 {link.text}
               </a>
             ))}
-          </div>
-          
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden text-white"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label="Toggle mobile menu"
-          >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
-          
-          <div className="hidden md:block">
-            <button 
-              onClick={() => document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' })}
-              className="text-sm bg-gradient-to-r from-[#00D4FF] to-[#8B5FBF] text-white font-semibold rounded-lg px-6 py-2 hover:shadow-lg hover:shadow-[#00D4FF]/30 transition-all duration-300 hover:-translate-y-1"
-            >
-              Transform Your Business
-            </button>
           </div>
         </div>
 
