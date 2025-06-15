@@ -12,7 +12,7 @@ const Footer = () => {
                 alt="NextSynthAi Logo" 
                 className="h-8 w-auto" 
               />
-              <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">NextSynthAi</span>
+              <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">NextsynthAi</span>
             </div>
             <p className="text-white">
               Transforming customer interactions with intelligent AI Voice agents 
@@ -54,7 +54,7 @@ const Footer = () => {
                   href="#industries"
                   className="text-white hover:text-white/80 transition-colors flex items-center"
                 >
-                  <span className="mr-2">•</span>Restaurant Voice AI
+                  <span className="mr-2">•</span>Autonomous AI Agents
                 </a>
               </li>
               <li>
@@ -62,7 +62,7 @@ const Footer = () => {
                   href="#industries"
                   className="text-white hover:text-white/80 transition-colors flex items-center"
                 >
-                  <span className="mr-2">•</span>Hotel Voice AI
+                  <span className="mr-2">•</span>Workflow Automations
                 </a>
               </li>
               <li>
@@ -70,7 +70,7 @@ const Footer = () => {
                   href="#industries"
                   className="text-white hover:text-white/80 transition-colors flex items-center"
                 >
-                  <span className="mr-2">•</span>Medical Voice AI
+                  <span className="mr-2">•</span>AI Voice Agents
                 </a>
               </li>
               <li>
@@ -78,7 +78,7 @@ const Footer = () => {
                   href="#industries"
                   className="text-white hover:text-white/80 transition-colors flex items-center"
                 >
-                  <span className="mr-2">•</span>Real Estate Voice AI
+                  <span className="mr-2">•</span>Social Media AI Systems
                 </a>
               </li>
               <li>
@@ -164,7 +164,7 @@ const Footer = () => {
         
         <div className="border-t border-white/10 pt-8 text-center text-white text-sm">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p>&copy; 2024 NextSynthAi. All rights reserved.</p>
+            <p>&copy; 2024 NextsynthAi. All rights reserved.</p>
             <div className="flex space-x-4 mt-4 md:mt-0">
               <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
               <a href="#" className="hover:text-white transition-colors">Terms of Service</a>

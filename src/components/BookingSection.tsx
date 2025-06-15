@@ -24,7 +24,7 @@ const BookingSection = () => {
             <span className="gradient-text-animate">Book Your Consultation</span>
           </h2>
           <p className="text-gray-300 text-xl md:text-2xl max-w-4xl mx-auto font-light leading-relaxed">
-            Ready to revolutionize your operations with AI? Book a personalized consultation and discover how NextSynnThai can automate your workflows and scale your success.
+            Ready to revolutionize your operations with AI? Book a personalized consultation and discover how NextsynthAi can automate your workflows and scale your success.
           </p>
         </div>
 

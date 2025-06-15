@@ -40,7 +40,7 @@ const HeroSection = () => {
               <span className="gradient-text-animate">Welcome to</span>
               <br />
               <span className="gradient-text-animate">
-                NextSynnThai
+                NextsynthAi
               </span>
             </h1>
             
