@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ChevronDown, ChevronUp } from "lucide-react";
+import { ChevronDown, ChevronUp, Bot, Workflow, Mic, Share2 } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const WhatWeDoSection = () => {
@@ -50,96 +50,156 @@ const WhatWeDoSection = () => {
           </p>
         </div>
 
-        {/* Services Grid with enhanced 3D effects */}
+        {/* Solutions Grid - Updated with new AI solutions */}
         <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20 transition-all duration-1000 delay-200 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          {/* Intelligent Automation Systems */}
+          
+          {/* Autonomous AI Agents */}
           <div className="group relative hover-lift">
             <div 
               className="glass-card card-float rounded-3xl p-10 h-full border-2 border-[#00D4FF]/30 shadow-2xl hover:shadow-[#00D4FF]/40 transition-all duration-500 hover:scale-105 hover:border-[#00D4FF]/50 backdrop-blur-xl bg-gray-900/30 cursor-pointer"
-              onClick={() => toggleCard('automation')}
+              onClick={() => toggleCard('autonomous')}
             >
               <div className="absolute top-6 right-6 w-16 h-16 bg-gradient-to-r from-[#00D4FF] to-[#8B5FBF] rounded-2xl flex items-center justify-center opacity-90 shadow-lg shadow-[#00D4FF]/30">
-                <div className="w-8 h-8 border-2 border-white rounded-lg relative">
-                  <div className="absolute inset-1 bg-white rounded opacity-70"></div>
-                  <div className="absolute top-1 left-1 w-2 h-2 bg-[#00D4FF] rounded animate-pulse-slow"></div>
-                </div>
+                <Bot className="w-8 h-8 text-white" />
               </div>
               
               <div className="flex items-center justify-between mb-8">
                 <h3 className="text-4xl font-black text-white tracking-wide font-inter">
-                  Intelligent Automation Systems
+                  Autonomous AI Agents
                 </h3>
                 <div className="text-[#00D4FF]">
-                  {expandedCard === 'automation' ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
+                  {expandedCard === 'autonomous' ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
                 </div>
               </div>
               
-              <div className={`space-y-6 transition-all duration-500 overflow-hidden ${expandedCard === 'automation' ? 'max-h-[800px] opacity-100' : 'max-h-0 opacity-0'}`}>
+              <div className={`space-y-6 transition-all duration-500 overflow-hidden ${expandedCard === 'autonomous' ? 'max-h-[800px] opacity-100' : 'max-h-0 opacity-0'}`}>
                 <div className="glass border-2 border-[#00D4FF]/40 rounded-2xl px-6 py-4 hover:bg-[#00D4FF]/15 hover:border-[#00D4FF]/60 hover:shadow-lg hover:shadow-[#00D4FF]/20 transition-all duration-300 hover:scale-105">
-                  <h4 className="text-[#00D4FF] text-lg font-bold mb-2 font-inter">Smart Process Optimization</h4>
-                  <p className="text-gray-300 text-sm">AI-driven systems that continuously analyze and optimize your business processes, eliminating bottlenecks and maximizing efficiency through intelligent automation.</p>
+                  <h4 className="text-[#00D4FF] text-lg font-bold mb-2 font-inter">Intelligent Decision Making</h4>
+                  <p className="text-gray-300 text-sm">AI agents that analyze complex data, learn from patterns, and make autonomous decisions to optimize business operations 24/7.</p>
                 </div>
                 
                 <div className="glass border-2 border-[#00D4FF]/40 rounded-2xl px-6 py-4 hover:bg-[#00D4FF]/15 hover:border-[#00D4FF]/60 hover:shadow-lg hover:shadow-[#00D4FF]/20 transition-all duration-300 hover:scale-105">
-                  <h4 className="text-[#00D4FF] text-lg font-bold mb-2 font-inter">Predictive Analytics Integration</h4>
-                  <p className="text-gray-300 text-sm">Advanced machine learning models that forecast trends, predict outcomes, and provide actionable insights to drive strategic decision-making.</p>
+                  <h4 className="text-[#00D4FF] text-lg font-bold mb-2 font-inter">Self-Learning Systems</h4>
+                  <p className="text-gray-300 text-sm">Adaptive agents that continuously improve performance through machine learning and real-time feedback loops.</p>
                 </div>
                 
                 <div className="glass border-2 border-[#00D4FF]/40 rounded-2xl px-6 py-4 hover:bg-[#00D4FF]/15 hover:border-[#00D4FF]/60 hover:shadow-lg hover:shadow-[#00D4FF]/20 transition-all duration-300 hover:scale-105">
-                  <h4 className="text-[#00D4FF] text-lg font-bold mb-2 font-inter">Adaptive Workflow Management</h4>
-                  <p className="text-gray-300 text-sm">Self-evolving workflow systems that learn from your team's patterns and automatically adapt to changing business requirements for seamless operations.</p>
-                </div>
-                
-                <div className="glass border-2 border-[#00D4FF]/40 rounded-2xl px-6 py-4 hover:bg-[#00D4FF]/15 hover:border-[#00D4FF]/60 hover:shadow-lg hover:shadow-[#00D4FF]/20 transition-all duration-300 hover:scale-105">
-                  <h4 className="text-[#00D4FF] text-lg font-bold mb-2 font-inter">Real-time Performance Monitoring</h4>
-                  <p className="text-gray-300 text-sm">Continuous monitoring and optimization of system performance with instant alerts, automated adjustments, and comprehensive analytics dashboards.</p>
+                  <h4 className="text-[#00D4FF] text-lg font-bold mb-2 font-inter">Multi-Platform Integration</h4>
+                  <p className="text-gray-300 text-sm">Seamlessly connect and coordinate across all your business platforms for unified autonomous operations.</p>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Autonomous Marketing Agents */}
+          {/* Workflow Automations */}
           <div className="group relative">
             <div 
-              className="glass-card rounded-3xl p-10 h-full border-2 border-[#C147E9]/30 shadow-2xl hover:shadow-[#C147E9]/40 transition-all duration-500 hover:scale-105 hover:border-[#C147E9]/50 backdrop-blur-xl bg-gray-900/30 cursor-pointer"
-              onClick={() => toggleCard('marketing')}
+              className="glass-card rounded-3xl p-10 h-full border-2 border-[#39FF14]/30 shadow-2xl hover:shadow-[#39FF14]/40 transition-all duration-500 hover:scale-105 hover:border-[#39FF14]/50 backdrop-blur-xl bg-gray-900/30 cursor-pointer"
+              onClick={() => toggleCard('workflow')}
             >
-              <div className="absolute top-6 right-6 w-16 h-16 bg-gradient-to-r from-[#8B5FBF] to-[#C147E9] rounded-2xl flex items-center justify-center opacity-90 shadow-lg shadow-[#C147E9]/30">
-                <div className="w-8 h-8 border-2 border-white rounded-full relative">
-                  <div className="absolute inset-1 bg-white rounded-full opacity-70"></div>
-                  <div className="absolute top-1 left-1 w-2 h-2 bg-[#C147E9] rounded-full animate-pulse-slow"></div>
-                  <div className="absolute bottom-1 right-1 w-1 h-1 bg-[#8B5FBF] rounded-full animate-pulse-slow" style={{animationDelay: '0.5s'}}></div>
-                </div>
+              <div className="absolute top-6 right-6 w-16 h-16 bg-gradient-to-r from-[#39FF14] to-[#00D4FF] rounded-2xl flex items-center justify-center opacity-90 shadow-lg shadow-[#39FF14]/30">
+                <Workflow className="w-8 h-8 text-white" />
               </div>
               
               <div className="flex items-center justify-between mb-8">
                 <h3 className="text-4xl font-black text-white tracking-wide font-inter">
-                  Autonomous Marketing Agents
+                  Workflow Automations
                 </h3>
-                <div className="text-[#C147E9]">
-                  {expandedCard === 'marketing' ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
+                <div className="text-[#39FF14]">
+                  {expandedCard === 'workflow' ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
                 </div>
               </div>
               
-              <div className={`space-y-6 transition-all duration-500 overflow-hidden ${expandedCard === 'marketing' ? 'max-h-[800px] opacity-100' : 'max-h-0 opacity-0'}`}>
+              <div className={`space-y-6 transition-all duration-500 overflow-hidden ${expandedCard === 'workflow' ? 'max-h-[800px] opacity-100' : 'max-h-0 opacity-0'}`}>
+                <div className="glass border-2 border-[#39FF14]/40 rounded-2xl px-6 py-4 hover:bg-[#39FF14]/15 hover:border-[#39FF14]/60 hover:shadow-lg hover:shadow-[#39FF14]/20 transition-all duration-300 hover:scale-105">
+                  <h4 className="text-[#39FF14] text-lg font-bold mb-2 font-inter">Smart Process Design</h4>
+                  <p className="text-gray-300 text-sm">Automatically design and optimize workflows that eliminate bottlenecks and maximize team productivity.</p>
+                </div>
+                
+                <div className="glass border-2 border-[#39FF14]/40 rounded-2xl px-6 py-4 hover:bg-[#39FF14]/15 hover:border-[#39FF14]/60 hover:shadow-lg hover:shadow-[#39FF14]/20 transition-all duration-300 hover:scale-105">
+                  <h4 className="text-[#39FF14] text-lg font-bold mb-2 font-inter">Real-Time Optimization</h4>
+                  <p className="text-gray-300 text-sm">Continuously monitor and adjust workflows in real-time based on performance metrics and changing business needs.</p>
+                </div>
+                
+                <div className="glass border-2 border-[#39FF14]/40 rounded-2xl px-6 py-4 hover:bg-[#39FF14]/15 hover:border-[#39FF14]/60 hover:shadow-lg hover:shadow-[#39FF14]/20 transition-all duration-300 hover:scale-105">
+                  <h4 className="text-[#39FF14] text-lg font-bold mb-2 font-inter">Cross-Department Coordination</h4>
+                  <p className="text-gray-300 text-sm">Seamlessly connect teams and departments with automated handoffs and intelligent task routing.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* AI Voice Agents */}
+          <div className="group relative">
+            <div 
+              className="glass-card rounded-3xl p-10 h-full border-2 border-[#C147E9]/30 shadow-2xl hover:shadow-[#C147E9]/40 transition-all duration-500 hover:scale-105 hover:border-[#C147E9]/50 backdrop-blur-xl bg-gray-900/30 cursor-pointer"
+              onClick={() => toggleCard('voice')}
+            >
+              <div className="absolute top-6 right-6 w-16 h-16 bg-gradient-to-r from-[#8B5FBF] to-[#C147E9] rounded-2xl flex items-center justify-center opacity-90 shadow-lg shadow-[#C147E9]/30">
+                <Mic className="w-8 h-8 text-white" />
+              </div>
+              
+              <div className="flex items-center justify-between mb-8">
+                <h3 className="text-4xl font-black text-white tracking-wide font-inter">
+                  AI Voice Agents
+                </h3>
+                <div className="text-[#C147E9]">
+                  {expandedCard === 'voice' ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
+                </div>
+              </div>
+              
+              <div className={`space-y-6 transition-all duration-500 overflow-hidden ${expandedCard === 'voice' ? 'max-h-[800px] opacity-100' : 'max-h-0 opacity-0'}`}>
                 <div className="glass border-2 border-[#C147E9]/40 rounded-2xl px-6 py-4 hover:bg-[#C147E9]/15 hover:border-[#C147E9]/60 hover:shadow-lg hover:shadow-[#C147E9]/20 transition-all duration-300 hover:scale-105">
-                  <h4 className="text-[#C147E9] text-lg font-bold mb-2 font-inter">Intelligent Customer Interaction</h4>
-                  <p className="text-gray-300 text-sm">AI-powered agents that understand context, emotions, and intent to deliver personalized customer experiences that build loyalty and drive conversions.</p>
+                  <h4 className="text-[#C147E9] text-lg font-bold mb-2 font-inter">Natural Conversation AI</h4>
+                  <p className="text-gray-300 text-sm">Advanced voice agents that understand context, emotion, and intent for human-like customer interactions.</p>
                 </div>
                 
                 <div className="glass border-2 border-[#C147E9]/40 rounded-2xl px-6 py-4 hover:bg-[#C147E9]/15 hover:border-[#C147E9]/60 hover:shadow-lg hover:shadow-[#C147E9]/20 transition-all duration-300 hover:scale-105">
-                  <h4 className="text-[#C147E9] text-lg font-bold mb-2 font-inter">Data-Driven Marketing Insights</h4>
-                  <p className="text-gray-300 text-sm">Comprehensive market analysis and customer behavior patterns that inform strategic campaign development and maximize marketing ROI across all channels.</p>
+                  <h4 className="text-[#C147E9] text-lg font-bold mb-2 font-inter">Multi-Language Support</h4>
+                  <p className="text-gray-300 text-sm">Communicate with customers worldwide using AI voice agents fluent in multiple languages and dialects.</p>
                 </div>
                 
                 <div className="glass border-2 border-[#C147E9]/40 rounded-2xl px-6 py-4 hover:bg-[#C147E9]/15 hover:border-[#C147E9]/60 hover:shadow-lg hover:shadow-[#C147E9]/20 transition-all duration-300 hover:scale-105">
-                  <h4 className="text-[#C147E9] text-lg font-bold mb-2 font-inter">Scalable Marketing Automation</h4>
-                  <p className="text-gray-300 text-sm">Multi-channel marketing campaigns that automatically scale with your business growth, adapting messaging and targeting for optimal performance at any size.</p>
+                  <h4 className="text-[#C147E9] text-lg font-bold mb-2 font-inter">24/7 Customer Support</h4>
+                  <p className="text-gray-300 text-sm">Never miss a customer call with intelligent voice agents that provide instant, accurate support around the clock.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Social Media AI Systems */}
+          <div className="group relative">
+            <div 
+              className="glass-card rounded-3xl p-10 h-full border-2 border-[#8B5FBF]/30 shadow-2xl hover:shadow-[#8B5FBF]/40 transition-all duration-500 hover:scale-105 hover:border-[#8B5FBF]/50 backdrop-blur-xl bg-gray-900/30 cursor-pointer"
+              onClick={() => toggleCard('social')}
+            >
+              <div className="absolute top-6 right-6 w-16 h-16 bg-gradient-to-r from-[#C147E9] to-[#8B5FBF] rounded-2xl flex items-center justify-center opacity-90 shadow-lg shadow-[#8B5FBF]/30">
+                <Share2 className="w-8 h-8 text-white" />
+              </div>
+              
+              <div className="flex items-center justify-between mb-8">
+                <h3 className="text-4xl font-black text-white tracking-wide font-inter">
+                  Social Media AI Systems
+                </h3>
+                <div className="text-[#8B5FBF]">
+                  {expandedCard === 'social' ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
+                </div>
+              </div>
+              
+              <div className={`space-y-6 transition-all duration-500 overflow-hidden ${expandedCard === 'social' ? 'max-h-[800px] opacity-100' : 'max-h-0 opacity-0'}`}>
+                <div className="glass border-2 border-[#8B5FBF]/40 rounded-2xl px-6 py-4 hover:bg-[#8B5FBF]/15 hover:border-[#8B5FBF]/60 hover:shadow-lg hover:shadow-[#8B5FBF]/20 transition-all duration-300 hover:scale-105">
+                  <h4 className="text-[#8B5FBF] text-lg font-bold mb-2 font-inter">Intelligent Content Creation</h4>
+                  <p className="text-gray-300 text-sm">AI-powered systems that create engaging, brand-consistent content across all social media platforms automatically.</p>
                 </div>
                 
-                <div className="glass border-2 border-[#C147E9]/40 rounded-2xl px-6 py-4 hover:bg-[#C147E9]/15 hover:border-[#C147E9]/60 hover:shadow-lg hover:shadow-[#C147E9]/20 transition-all duration-300 hover:scale-105">
-                  <h4 className="text-[#C147E9] text-lg font-bold mb-2 font-inter">Personalized Customer Experiences</h4>
-                  <p className="text-gray-300 text-sm">Dynamic personalization engines that create unique, tailored interactions for each customer, increasing engagement and building lasting relationships that drive lifetime value.</p>
+                <div className="glass border-2 border-[#8B5FBF]/40 rounded-2xl px-6 py-4 hover:bg-[#8B5FBF]/15 hover:border-[#8B5FBF]/60 hover:shadow-lg hover:shadow-[#8B5FBF]/20 transition-all duration-300 hover:scale-105">
+                  <h4 className="text-[#8B5FBF] text-lg font-bold mb-2 font-inter">Audience Analytics & Targeting</h4>
+                  <p className="text-gray-300 text-sm">Deep audience insights and automated targeting that maximize engagement and conversion rates across social platforms.</p>
+                </div>
+                
+                <div className="glass border-2 border-[#8B5FBF]/40 rounded-2xl px-6 py-4 hover:bg-[#8B5FBF]/15 hover:border-[#8B5FBF]/60 hover:shadow-lg hover:shadow-[#8B5FBF]/20 transition-all duration-300 hover:scale-105">
+                  <h4 className="text-[#8B5FBF] text-lg font-bold mb-2 font-inter">Real-Time Engagement Management</h4>
+                  <p className="text-gray-300 text-sm">Automated responses, community management, and trend monitoring that keeps your brand active and responsive 24/7.</p>
                 </div>
               </div>
             </div>
