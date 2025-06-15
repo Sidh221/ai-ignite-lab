@@ -1,15 +1,9 @@
 import { useState, useEffect } from "react";
-import { Menu, X, CalendarIcon } from "lucide-react";
-import { Calendar } from "@/components/ui/calendar";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
-import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
-import { format } from "date-fns";
+import { Menu, X } from "lucide-react";
 
 const NavBar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [selectedDate, setSelectedDate] = useState<Date>();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -61,43 +55,12 @@ const NavBar = () => {
           </button>
           
           <div className="hidden md:block">
-            <Popover>
-              <PopoverTrigger asChild>
-                <Button
-                  className={cn(
-                    "text-sm bg-gradient-to-r from-[#00D4FF] to-[#8B5FBF] text-white font-semibold rounded-lg px-6 py-2 hover:shadow-lg hover:shadow-[#00D4FF]/30 transition-all duration-300 hover:-translate-y-1",
-                    !selectedDate && "text-white"
-                  )}
-                >
-                  <CalendarIcon className="mr-2 h-4 w-4" />
-                  {selectedDate ? format(selectedDate, "PPP") : "Book a Call"}
-                </Button>
-              </PopoverTrigger>
-              <PopoverContent className="w-auto p-0 bg-gray-900/95 backdrop-blur-lg border border-[#00D4FF]/30" align="end">
-                <Calendar
-                  mode="single"
-                  selected={selectedDate}
-                  onSelect={setSelectedDate}
-                  disabled={(date) => date < new Date()}
-                  initialFocus
-                  className={cn("p-3 pointer-events-auto text-white")}
-                />
-                {selectedDate && (
-                  <div className="p-3 border-t border-[#00D4FF]/20">
-                    <p className="text-sm text-gray-300 mb-2">Selected: {format(selectedDate, "PPP")}</p>
-                    <Button 
-                      className="w-full bg-gradient-to-r from-[#00D4FF] to-[#8B5FBF] hover:opacity-90"
-                      onClick={() => {
-                        // Here you would typically integrate with a booking system
-                        alert(`Booking confirmed for ${format(selectedDate, "PPP")}`);
-                      }}
-                    >
-                      Confirm Booking
-                    </Button>
-                  </div>
-                )}
-              </PopoverContent>
-            </Popover>
+            <button 
+              onClick={() => document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' })}
+              className="text-sm bg-gradient-to-r from-[#00D4FF] to-[#8B5FBF] text-white font-semibold rounded-lg px-6 py-2 hover:shadow-lg hover:shadow-[#00D4FF]/30 transition-all duration-300 hover:-translate-y-1"
+            >
+              Transform Your Business
+            </button>
           </div>
         </div>
 

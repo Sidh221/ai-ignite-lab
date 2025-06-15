@@ -2,6 +2,7 @@
 import NavBar from "@/components/NavBar";
 import HeroSection from "@/components/HeroSection";
 import WhatWeDoSection from "@/components/WhatWeDoSection";
+import TransformBusinessSection from "@/components/TransformBusinessSection";
 import CTASection from "@/components/BookingCalendar";
 import Footer from "@/components/Footer";
 
@@ -12,6 +13,7 @@ const Index = () => {
       <div className="h-px bg-gradient-to-r from-transparent via-gray-800 to-transparent"></div>
       <HeroSection />
       <WhatWeDoSection />
+      <TransformBusinessSection />
       <CTASection />
       <Footer />
     </div>
