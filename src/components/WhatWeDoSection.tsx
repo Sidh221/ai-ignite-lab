@@ -59,22 +59,22 @@ const WhatWeDoSection = () => {
               <div className="space-y-6">
                 <div className="glass border-2 border-[#00D4FF]/40 rounded-2xl px-6 py-4 hover:bg-[#00D4FF]/15 hover:border-[#00D4FF]/60 hover:shadow-lg hover:shadow-[#00D4FF]/20 transition-all duration-300 hover:scale-105">
                   <h4 className="text-[#00D4FF] text-lg font-bold mb-2 font-inter">Smart Process Optimization</h4>
-                  <p className="text-gray-300 text-sm">AI-driven process analysis and optimization for maximum efficiency</p>
+                  <p className="text-gray-300 text-sm">AI-driven systems that continuously analyze and optimize your business processes, eliminating bottlenecks and maximizing efficiency through intelligent automation.</p>
                 </div>
                 
                 <div className="glass border-2 border-[#00D4FF]/40 rounded-2xl px-6 py-4 hover:bg-[#00D4FF]/15 hover:border-[#00D4FF]/60 hover:shadow-lg hover:shadow-[#00D4FF]/20 transition-all duration-300 hover:scale-105">
                   <h4 className="text-[#00D4FF] text-lg font-bold mb-2 font-inter">Predictive Analytics Integration</h4>
-                  <p className="text-gray-300 text-sm">Advanced forecasting and trend analysis for strategic decision making</p>
+                  <p className="text-gray-300 text-sm">Advanced machine learning models that forecast trends, predict outcomes, and provide actionable insights to drive strategic decision-making.</p>
                 </div>
                 
                 <div className="glass border-2 border-[#00D4FF]/40 rounded-2xl px-6 py-4 hover:bg-[#00D4FF]/15 hover:border-[#00D4FF]/60 hover:shadow-lg hover:shadow-[#00D4FF]/20 transition-all duration-300 hover:scale-105">
                   <h4 className="text-[#00D4FF] text-lg font-bold mb-2 font-inter">Adaptive Workflow Management</h4>
-                  <p className="text-gray-300 text-sm">Self-evolving workflows that adapt to changing business needs</p>
+                  <p className="text-gray-300 text-sm">Self-evolving workflow systems that learn from your team's patterns and automatically adapt to changing business requirements for seamless operations.</p>
                 </div>
                 
                 <div className="glass border-2 border-[#00D4FF]/40 rounded-2xl px-6 py-4 hover:bg-[#00D4FF]/15 hover:border-[#00D4FF]/60 hover:shadow-lg hover:shadow-[#00D4FF]/20 transition-all duration-300 hover:scale-105">
                   <h4 className="text-[#00D4FF] text-lg font-bold mb-2 font-inter">Real-time Performance Monitoring</h4>
-                  <p className="text-gray-300 text-sm">Continuous monitoring and optimization of system performance</p>
+                  <p className="text-gray-300 text-sm">Continuous monitoring and optimization of system performance with instant alerts, automated adjustments, and comprehensive analytics dashboards.</p>
                 </div>
               </div>
             </div>
@@ -98,22 +98,22 @@ const WhatWeDoSection = () => {
               <div className="space-y-6">
                 <div className="glass border-2 border-[#C147E9]/40 rounded-2xl px-6 py-4 hover:bg-[#C147E9]/15 hover:border-[#C147E9]/60 hover:shadow-lg hover:shadow-[#C147E9]/20 transition-all duration-300 hover:scale-105">
                   <h4 className="text-[#C147E9] text-lg font-bold mb-2 font-inter">Intelligent Customer Interaction</h4>
-                  <p className="text-gray-300 text-sm">AI agents that understand and respond to customer needs naturally</p>
+                  <p className="text-gray-300 text-sm">AI-powered agents that understand context, emotions, and intent to deliver personalized customer experiences that build loyalty and drive conversions.</p>
                 </div>
                 
                 <div className="glass border-2 border-[#C147E9]/40 rounded-2xl px-6 py-4 hover:bg-[#C147E9]/15 hover:border-[#C147E9]/60 hover:shadow-lg hover:shadow-[#C147E9]/20 transition-all duration-300 hover:scale-105">
-                  <h4 className="text-[#C147E9] text-lg font-bold mb-2 font-inter">Data-Driven Insights for Strategic Marketing</h4>
-                  <p className="text-gray-300 text-sm">Comprehensive market analysis for strategic campaign development</p>
+                  <h4 className="text-[#C147E9] text-lg font-bold mb-2 font-inter">Data-Driven Marketing Insights</h4>
+                  <p className="text-gray-300 text-sm">Comprehensive market analysis and customer behavior patterns that inform strategic campaign development and maximize marketing ROI across all channels.</p>
                 </div>
                 
                 <div className="glass border-2 border-[#C147E9]/40 rounded-2xl px-6 py-4 hover:bg-[#C147E9]/15 hover:border-[#C147E9]/60 hover:shadow-lg hover:shadow-[#C147E9]/20 transition-all duration-300 hover:scale-105">
-                  <h4 className="text-[#C147E9] text-lg font-bold mb-2 font-inter">Scalable Marketing Solutions</h4>
-                  <p className="text-gray-300 text-sm">Campaigns that automatically scale with your business growth</p>
+                  <h4 className="text-[#C147E9] text-lg font-bold mb-2 font-inter">Scalable Marketing Automation</h4>
+                  <p className="text-gray-300 text-sm">Multi-channel marketing campaigns that automatically scale with your business growth, adapting messaging and targeting for optimal performance at any size.</p>
                 </div>
                 
                 <div className="glass border-2 border-[#C147E9]/40 rounded-2xl px-6 py-4 hover:bg-[#C147E9]/15 hover:border-[#C147E9]/60 hover:shadow-lg hover:shadow-[#C147E9]/20 transition-all duration-300 hover:scale-105">
                   <h4 className="text-[#C147E9] text-lg font-bold mb-2 font-inter">Personalized Customer Experiences</h4>
-                  <p className="text-gray-300 text-sm">Tailored interactions that build lasting customer relationships</p>
+                  <p className="text-gray-300 text-sm">Dynamic personalization engines that create unique, tailored interactions for each customer, increasing engagement and building lasting relationships that drive lifetime value.</p>
                 </div>
               </div>
             </div>
