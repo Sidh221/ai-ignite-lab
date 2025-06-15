@@ -1,7 +1,10 @@
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+
 const HeroSection = () => {
+  const { ref, inView } = useScrollAnimation();
 
   return (
-    <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-[#0A0E27] via-[#1a1f3a] to-black">
+    <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-[#0A0E27] via-[#1a1f3a] to-black" ref={ref}>
       {/* Animated background particles and geometric shapes */}
       <div className="absolute inset-0">
         {/* Large background gradient blobs */}
@@ -32,7 +35,7 @@ const HeroSection = () => {
       <div className="container mx-auto px-6 py-20 relative z-10">
         <div className="flex flex-col lg:flex-row items-center min-h-screen">
           {/* Left content */}
-          <div className="lg:w-1/2 mb-12 lg:mb-0 lg:pr-12">
+          <div className={`lg:w-1/2 mb-12 lg:mb-0 lg:pr-12 transition-all duration-1000 ${inView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
             <h1 className="text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter mb-8 leading-tight font-inter">
               <span className="gradient-text-animate">Welcome to</span>
               <br />
@@ -80,7 +83,7 @@ const HeroSection = () => {
           </div>
           
           {/* Right side - Enhanced 3D Neural Network Visualization */}
-          <div className="lg:w-1/2 lg:pl-12">
+          <div className={`lg:w-1/2 lg:pl-12 transition-all duration-1000 delay-300 ${inView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
             <div className="relative h-[600px] lg:h-[700px]">
               {/* 3D Neural Network Animation with enhanced depth */}
               <div className="absolute inset-0 flex items-center justify-center">

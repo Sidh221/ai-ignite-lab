@@ -5,12 +5,14 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { format } from "date-fns";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const TransformBusinessSection = () => {
   const [selectedDate, setSelectedDate] = useState<Date>();
+  const { ref, inView } = useScrollAnimation();
 
   return (
-    <section id="booking" className="py-32 bg-gradient-to-br from-[#0A0E27] via-[#1a1f3a] to-black relative overflow-hidden">
+    <section id="booking" className="py-32 bg-gradient-to-br from-[#0A0E27] via-[#1a1f3a] to-black relative overflow-hidden" ref={ref}>
       {/* Enhanced background effects */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-[#8B5FBF]/20 to-[#C147E9]/20 rounded-full filter blur-[150px] animate-pulse-slow"></div>
@@ -24,7 +26,7 @@ const TransformBusinessSection = () => {
       
       <div className="container mx-auto px-6 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className={`text-center mb-16 transition-all duration-1000 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h2 className="text-6xl md:text-7xl font-black leading-tight tracking-tight font-inter mb-8">
             <span className="gradient-text-animate">Transform Your Business</span>
           </h2>
@@ -35,7 +37,7 @@ const TransformBusinessSection = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left side - Benefits */}
-          <div className="space-y-8">
+          <div className={`space-y-8 transition-all duration-1000 delay-200 ${inView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
             <div className="glass-card card-float rounded-3xl p-8 border-2 border-[#00D4FF]/30 hover:border-[#00D4FF]/50 transition-all duration-500 hover-lift">
               <div className="flex items-center mb-6">
                 <div className="w-12 h-12 bg-gradient-to-r from-[#00D4FF] to-[#8B5FBF] rounded-xl flex items-center justify-center mr-4">
@@ -74,7 +76,7 @@ const TransformBusinessSection = () => {
           </div>
 
           {/* Right side - Booking Calendar */}
-          <div className="flex flex-col items-center">
+          <div className={`flex flex-col items-center transition-all duration-1000 delay-400 ${inView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
             <div className="glass-card card-float rounded-3xl p-10 border-2 border-[#8B5FBF]/30 hover:border-[#8B5FBF]/50 transition-all duration-500 backdrop-blur-xl bg-gray-900/40 w-full max-w-md">
               <div className="text-center mb-8">
                 <h3 className="text-3xl font-black text-white mb-4 font-inter">Book Your Call</h3>

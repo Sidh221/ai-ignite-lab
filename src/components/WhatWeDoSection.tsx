@@ -1,6 +1,16 @@
+import { useState } from "react";
+import { ChevronDown, ChevronUp } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+
 const WhatWeDoSection = () => {
+  const [expandedCard, setExpandedCard] = useState<string | null>(null);
+  const { ref, inView } = useScrollAnimation();
+  const toggleCard = (cardId: string) => {
+    setExpandedCard(expandedCard === cardId ? null : cardId);
+  };
+
   return (
-    <section className="py-32 bg-gradient-to-br from-[#0A0E27] via-[#1a1f3a] to-black relative overflow-hidden">
+    <section className="py-32 bg-gradient-to-br from-[#0A0E27] via-[#1a1f3a] to-black relative overflow-hidden" ref={ref}>
       {/* Enhanced background effects with floating geometric shapes */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-1/3 w-96 h-96 bg-gradient-to-r from-[#8B5FBF]/20 to-[#C147E9]/20 rounded-full filter blur-[150px] animate-pulse-slow"></div>
@@ -31,7 +41,7 @@ const WhatWeDoSection = () => {
       
       <div className="container mx-auto px-6 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-20" id="services">
+        <div className={`text-center mb-20 transition-all duration-1000 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} id="services">
           <h2 className="text-6xl md:text-7xl font-black text-white mb-8 leading-tight tracking-tight font-inter">
             Our <span className="gradient-text-animate">AI Solutions</span>
           </h2>
@@ -41,10 +51,13 @@ const WhatWeDoSection = () => {
         </div>
 
         {/* Services Grid with enhanced 3D effects */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
+        <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20 transition-all duration-1000 delay-200 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           {/* Intelligent Automation Systems */}
           <div className="group relative hover-lift">
-            <div className="glass-card card-float rounded-3xl p-10 h-full border-2 border-[#00D4FF]/30 shadow-2xl hover:shadow-[#00D4FF]/40 transition-all duration-500 hover:scale-105 hover:border-[#00D4FF]/50 backdrop-blur-xl bg-gray-900/30">
+            <div 
+              className="glass-card card-float rounded-3xl p-10 h-full border-2 border-[#00D4FF]/30 shadow-2xl hover:shadow-[#00D4FF]/40 transition-all duration-500 hover:scale-105 hover:border-[#00D4FF]/50 backdrop-blur-xl bg-gray-900/30 cursor-pointer"
+              onClick={() => toggleCard('automation')}
+            >
               <div className="absolute top-6 right-6 w-16 h-16 bg-gradient-to-r from-[#00D4FF] to-[#8B5FBF] rounded-2xl flex items-center justify-center opacity-90 shadow-lg shadow-[#00D4FF]/30">
                 <div className="w-8 h-8 border-2 border-white rounded-lg relative">
                   <div className="absolute inset-1 bg-white rounded opacity-70"></div>
@@ -52,11 +65,16 @@ const WhatWeDoSection = () => {
                 </div>
               </div>
               
-              <h3 className="text-4xl font-black text-white mb-8 tracking-wide font-inter">
-                Intelligent Automation Systems
-              </h3>
+              <div className="flex items-center justify-between mb-8">
+                <h3 className="text-4xl font-black text-white tracking-wide font-inter">
+                  Intelligent Automation Systems
+                </h3>
+                <div className="text-[#00D4FF]">
+                  {expandedCard === 'automation' ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
+                </div>
+              </div>
               
-              <div className="space-y-6">
+              <div className={`space-y-6 transition-all duration-500 overflow-hidden ${expandedCard === 'automation' ? 'max-h-[800px] opacity-100' : 'max-h-0 opacity-0'}`}>
                 <div className="glass border-2 border-[#00D4FF]/40 rounded-2xl px-6 py-4 hover:bg-[#00D4FF]/15 hover:border-[#00D4FF]/60 hover:shadow-lg hover:shadow-[#00D4FF]/20 transition-all duration-300 hover:scale-105">
                   <h4 className="text-[#00D4FF] text-lg font-bold mb-2 font-inter">Smart Process Optimization</h4>
                   <p className="text-gray-300 text-sm">AI-driven systems that continuously analyze and optimize your business processes, eliminating bottlenecks and maximizing efficiency through intelligent automation.</p>
@@ -82,7 +100,10 @@ const WhatWeDoSection = () => {
 
           {/* Autonomous Marketing Agents */}
           <div className="group relative">
-            <div className="glass-card rounded-3xl p-10 h-full border-2 border-[#C147E9]/30 shadow-2xl hover:shadow-[#C147E9]/40 transition-all duration-500 hover:scale-105 hover:border-[#C147E9]/50 backdrop-blur-xl bg-gray-900/30">
+            <div 
+              className="glass-card rounded-3xl p-10 h-full border-2 border-[#C147E9]/30 shadow-2xl hover:shadow-[#C147E9]/40 transition-all duration-500 hover:scale-105 hover:border-[#C147E9]/50 backdrop-blur-xl bg-gray-900/30 cursor-pointer"
+              onClick={() => toggleCard('marketing')}
+            >
               <div className="absolute top-6 right-6 w-16 h-16 bg-gradient-to-r from-[#8B5FBF] to-[#C147E9] rounded-2xl flex items-center justify-center opacity-90 shadow-lg shadow-[#C147E9]/30">
                 <div className="w-8 h-8 border-2 border-white rounded-full relative">
                   <div className="absolute inset-1 bg-white rounded-full opacity-70"></div>
@@ -91,11 +112,16 @@ const WhatWeDoSection = () => {
                 </div>
               </div>
               
-              <h3 className="text-4xl font-black text-white mb-8 tracking-wide font-inter">
-                Autonomous Marketing Agents
-              </h3>
+              <div className="flex items-center justify-between mb-8">
+                <h3 className="text-4xl font-black text-white tracking-wide font-inter">
+                  Autonomous Marketing Agents
+                </h3>
+                <div className="text-[#C147E9]">
+                  {expandedCard === 'marketing' ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
+                </div>
+              </div>
               
-              <div className="space-y-6">
+              <div className={`space-y-6 transition-all duration-500 overflow-hidden ${expandedCard === 'marketing' ? 'max-h-[800px] opacity-100' : 'max-h-0 opacity-0'}`}>
                 <div className="glass border-2 border-[#C147E9]/40 rounded-2xl px-6 py-4 hover:bg-[#C147E9]/15 hover:border-[#C147E9]/60 hover:shadow-lg hover:shadow-[#C147E9]/20 transition-all duration-300 hover:scale-105">
                   <h4 className="text-[#C147E9] text-lg font-bold mb-2 font-inter">Intelligent Customer Interaction</h4>
                   <p className="text-gray-300 text-sm">AI-powered agents that understand context, emotions, and intent to deliver personalized customer experiences that build loyalty and drive conversions.</p>
@@ -121,7 +147,7 @@ const WhatWeDoSection = () => {
         </div>
 
         {/* Enhanced Key Messaging with 3D effects */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+        <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center transition-all duration-1000 delay-500 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="glass rounded-2xl p-6 border-2 border-[#00D4FF]/30 hover:border-[#00D4FF]/50 hover:bg-[#00D4FF]/10 hover:shadow-xl hover:shadow-[#00D4FF]/25 transition-all duration-300 hover:scale-105 backdrop-blur-lg bg-gray-900/20">
             <div className="text-3xl font-black text-[#00D4FF] mb-3 font-inter animate-pulse-slow">Innovation Leader</div>
             <div className="text-gray-400 text-sm font-medium">Pioneering next-gen AI automation</div>
