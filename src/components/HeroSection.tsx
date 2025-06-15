@@ -61,6 +61,89 @@ const HeroSection = () => {
             </div>
           </div>
           
+          {/* Right side - 3D Neural Network Visualization */}
+          <div className="lg:w-1/2 lg:pl-12">
+            <div className="relative h-[600px] lg:h-[700px]">
+              {/* 3D Neural Network Animation */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="relative w-full h-full max-w-lg">
+                  {/* Neural Network Nodes */}
+                  <div className="absolute inset-0">
+                    {/* Input Layer */}
+                    <div className="absolute left-8 top-1/2 -translate-y-1/2 space-y-16">
+                      {[...Array(4)].map((_, i) => (
+                        <div key={`input-${i}`} className="w-4 h-4 bg-gradient-to-r from-[#00D4FF] to-[#8B5FBF] rounded-full animate-pulse-slow shadow-lg shadow-[#00D4FF]/50"></div>
+                      ))}
+                    </div>
+                    
+                    {/* Hidden Layer 1 */}
+                    <div className="absolute left-1/3 top-1/2 -translate-y-1/2 space-y-12">
+                      {[...Array(6)].map((_, i) => (
+                        <div key={`hidden1-${i}`} className="w-3 h-3 bg-gradient-to-r from-[#8B5FBF] to-[#C147E9] rounded-full animate-pulse-slow shadow-lg shadow-[#8B5FBF]/50" style={{animationDelay: `${i * 0.2}s`}}></div>
+                      ))}
+                    </div>
+                    
+                    {/* Hidden Layer 2 */}
+                    <div className="absolute left-2/3 top-1/2 -translate-y-1/2 space-y-12">
+                      {[...Array(6)].map((_, i) => (
+                        <div key={`hidden2-${i}`} className="w-3 h-3 bg-gradient-to-r from-[#C147E9] to-[#39FF14] rounded-full animate-pulse-slow shadow-lg shadow-[#C147E9]/50" style={{animationDelay: `${i * 0.3}s`}}></div>
+                      ))}
+                    </div>
+                    
+                    {/* Output Layer */}
+                    <div className="absolute right-8 top-1/2 -translate-y-1/2 space-y-20">
+                      {[...Array(3)].map((_, i) => (
+                        <div key={`output-${i}`} className="w-4 h-4 bg-gradient-to-r from-[#39FF14] to-[#00D4FF] rounded-full animate-pulse-slow shadow-lg shadow-[#39FF14]/50" style={{animationDelay: `${i * 0.4}s`}}></div>
+                      ))}
+                    </div>
+                    
+                    {/* Animated Connection Lines */}
+                    <svg className="absolute inset-0 w-full h-full pointer-events-none">
+                      <defs>
+                        <linearGradient id="connectionGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                          <stop offset="0%" stopColor="#00D4FF" stopOpacity="0.6"/>
+                          <stop offset="50%" stopColor="#8B5FBF" stopOpacity="0.8"/>
+                          <stop offset="100%" stopColor="#C147E9" stopOpacity="0.6"/>
+                        </linearGradient>
+                      </defs>
+                      
+                      {/* Connection lines with animation */}
+                      {[...Array(20)].map((_, i) => (
+                        <line
+                          key={`connection-${i}`}
+                          x1={`${20 + (i % 3) * 15}%`}
+                          y1={`${30 + (i % 4) * 15}%`}
+                          x2={`${40 + (i % 3) * 20}%`}
+                          y2={`${25 + (i % 5) * 15}%`}
+                          stroke="url(#connectionGradient)"
+                          strokeWidth="1"
+                          opacity="0.7"
+                          className="animate-pulse-slow"
+                          style={{animationDelay: `${i * 0.1}s`}}
+                        />
+                      ))}
+                    </svg>
+                  </div>
+                  
+                  {/* Floating particles */}
+                  <div className="absolute inset-0">
+                    {[...Array(8)].map((_, i) => (
+                      <div
+                        key={`particle-${i}`}
+                        className="absolute w-1 h-1 bg-[#00D4FF] rounded-full animate-float opacity-60"
+                        style={{
+                          left: `${20 + (i % 4) * 20}%`,
+                          top: `${20 + (i % 3) * 25}%`,
+                          animationDelay: `${i * 0.5}s`,
+                          animationDuration: `${4 + (i % 3)}s`
+                        }}
+                      ></div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
