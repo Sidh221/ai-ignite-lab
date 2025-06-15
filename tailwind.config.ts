@@ -65,23 +65,11 @@ export default {
           DEFAULT: '#96C2DB',
           light: '#E5EDF1',
         },
-        'space-blue': '#0A0E27',
-        'navy-deep': '#1a1f3a',
-        'electric-purple': '#8B5FBF',
-        'magenta-bright': '#C147E9',
-        'cyan-electric': '#00D4FF',
-        'green-electric': '#39FF14',
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
-      },
-      fontFamily: {
-        sans: ['Inter', 'Nunito Sans', 'Luxora Grotesk', 'Poppins', 'sans-serif'],
-        inter: ['Inter', 'sans-serif'],
-        nunito: ['Nunito Sans', 'sans-serif'],
-        display: ['Outfit', 'Inter', 'system-ui', 'sans-serif'],
       },
       keyframes: {
         "accordion-down": {
@@ -93,16 +81,8 @@ export default {
           to: { height: "0" },
         },
         float: {
-          '0%, 100%': { transform: 'translateY(0px)' },
-          '50%': { transform: 'translateY(-20px)' },
-        },
-        'pulse-glow': {
-          '0%': { boxShadow: '0 0 20px rgba(0, 212, 255, 0.3)' },
-          '100%': { boxShadow: '0 0 40px rgba(0, 212, 255, 0.6)' },
-        },
-        'gradient-shift': {
-          '0%, 100%': { backgroundPosition: '0% 50%' },
-          '50%': { backgroundPosition: '100% 50%' },
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-10px)" },
         },
         "fade-in": {
           "0%": { opacity: "0", transform: "translateY(10px)" },
@@ -181,10 +161,7 @@ export default {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        'float': 'float 6s ease-in-out infinite',
-        'pulse-glow': 'pulse-glow 2s ease-in-out infinite alternate',
-        'rotate-slow': 'rotate 20s linear infinite',
-        'gradient-shift': 'gradient-shift 8s ease-in-out infinite',
+        float: "float 6s ease-in-out infinite",
         "fade-in": "fade-in 0.5s ease-out",
         "fade-in-up": "fade-in-up 0.7s ease-out",
         "pulse-slow": "pulse-slow 3s infinite ease-in-out",
@@ -204,8 +181,10 @@ export default {
         "gradient-violet-cyclamen": "linear-gradient(90deg, #8B5CF6 0%, #EC4899 100%)",
         "glass-gradient": "linear-gradient(135deg, rgba(79, 70, 229, 0.2) 0%, rgba(139, 92, 246, 0.1) 50%, rgba(236, 72, 153, 0.2) 100%)",
       },
-      backdropBlur: {
-        'xs': '2px',
+      fontFamily: {
+        sans: ['Inter', 'Nunito Sans', 'Luxora Grotesk', 'Poppins', 'sans-serif'],
+        inter: ['Inter', 'sans-serif'],
+        nunito: ['Nunito Sans', 'sans-serif'],
       },
     },
   },
