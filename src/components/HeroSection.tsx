@@ -34,9 +34,9 @@ const HeroSection = () => {
           {/* Left content */}
           <div className="lg:w-1/2 mb-12 lg:mb-0 lg:pr-12">
             <h1 className="text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter mb-8 leading-tight font-inter">
-              <span className="text-white">Welcome to</span>
+              <span className="gradient-text-animate">Welcome to</span>
               <br />
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#00D4FF] via-[#8B5FBF] to-[#C147E9] animate-gradient-text">
+              <span className="gradient-text-animate">
                 NextSynnThai
               </span>
             </h1>
@@ -48,16 +48,18 @@ const HeroSection = () => {
             <div className="flex flex-col sm:flex-row gap-6">
               <button 
                 onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
-                className="group relative bg-gradient-to-r from-[#00D4FF] to-[#8B5FBF] text-white font-bold rounded-2xl px-8 py-4 hover:shadow-2xl hover:shadow-[#00D4FF]/40 transition-all duration-300 hover:-translate-y-1 hover:scale-105"
+                className="group relative bg-gradient-to-r from-[#00D4FF] to-[#8B5FBF] text-white font-bold rounded-2xl px-8 py-4 hover:shadow-2xl hover:shadow-[#00D4FF]/60 transition-all duration-300 hover:-translate-y-1 hover:scale-105 shadow-lg shadow-[#00D4FF]/30"
               >
                 <span className="relative z-10 font-inter">Explore Our Solutions</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-[#8B5FBF] to-[#C147E9] rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-[#00D4FF] to-[#8B5FBF] rounded-2xl blur-sm opacity-50 group-hover:opacity-70 transition-opacity duration-300"></div>
               </button>
               <button 
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                className="group glass border-2 border-[#39FF14]/40 text-white font-bold rounded-2xl px-8 py-4 hover:bg-[#39FF14]/20 hover:border-[#39FF14]/70 hover:shadow-xl hover:shadow-[#39FF14]/30 transition-all duration-300 hover:-translate-y-1 hover:scale-105"
+                className="group glass border-2 border-[#00D4FF]/60 text-white font-bold rounded-2xl px-8 py-4 hover:bg-[#00D4FF]/20 hover:border-[#00D4FF]/100 hover:shadow-2xl hover:shadow-[#00D4FF]/60 transition-all duration-300 hover:-translate-y-1 hover:scale-105 shadow-lg shadow-[#00D4FF]/20"
               >
                 <span className="font-inter">Get Started Today</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-[#00D4FF]/10 to-[#8B5FBF]/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </button>
             </div>
             

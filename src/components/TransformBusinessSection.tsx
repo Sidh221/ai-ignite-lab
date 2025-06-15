@@ -25,8 +25,8 @@ const TransformBusinessSection = () => {
       <div className="container mx-auto px-6 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-6xl md:text-7xl font-black text-white mb-8 leading-tight tracking-tight font-inter">
-            Transform Your <span className="gradient-text-animate">Business</span>
+          <h2 className="text-6xl md:text-7xl font-black leading-tight tracking-tight font-inter mb-8">
+            <span className="gradient-text-animate">Transform Your Business</span>
           </h2>
           <p className="text-gray-300 text-xl md:text-2xl max-w-4xl mx-auto font-light leading-relaxed">
             Ready to revolutionize your operations with AI? Book a personalized consultation and discover how NextSynnThai can automate your workflows and scale your success.
@@ -86,7 +86,7 @@ const TransformBusinessSection = () => {
                   <PopoverTrigger asChild>
                     <Button
                       className={cn(
-                        "w-full bg-gradient-to-r from-[#00D4FF] to-[#8B5FBF] text-white font-semibold rounded-xl px-6 py-4 hover:shadow-xl hover:shadow-[#00D4FF]/40 transition-all duration-300 hover:-translate-y-1 text-base",
+                        "w-full bg-gradient-to-r from-[#00D4FF] to-[#8B5FBF] text-white font-semibold rounded-xl px-6 py-4 hover:shadow-2xl hover:shadow-[#00D4FF]/60 transition-all duration-300 hover:-translate-y-1 text-base shadow-lg shadow-[#00D4FF]/30",
                         !selectedDate && "text-white"
                       )}
                     >
@@ -116,7 +116,7 @@ const TransformBusinessSection = () => {
                     </div>
                     
                     <Button 
-                      className="w-full bg-gradient-to-r from-[#39FF14] to-[#00D4FF] hover:opacity-90 font-bold text-black rounded-xl py-4 text-base hover:shadow-xl hover:shadow-[#39FF14]/30 transition-all duration-300 hover:-translate-y-1"
+                      className="w-full bg-gradient-to-r from-[#00D4FF] to-[#8B5FBF] hover:opacity-90 font-bold text-white rounded-xl py-4 text-base hover:shadow-2xl hover:shadow-[#00D4FF]/60 transition-all duration-300 hover:-translate-y-1 shadow-lg shadow-[#00D4FF]/30"
                       onClick={() => {
                         // Here you would typically integrate with a booking system
                         alert(`🚀 Consultation booked for ${format(selectedDate, "EEEE, MMMM do, yyyy")}!\n\nWe'll send you a confirmation email with the meeting details shortly.`);

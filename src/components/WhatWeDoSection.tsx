@@ -33,7 +33,7 @@ const WhatWeDoSection = () => {
         {/* Section Header */}
         <div className="text-center mb-20" id="services">
           <h2 className="text-6xl md:text-7xl font-black text-white mb-8 leading-tight tracking-tight font-inter">
-            Our <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#00D4FF] to-[#8B5FBF] animate-gradient-text">AI Solutions</span>
+            Our <span className="gradient-text-animate">AI Solutions</span>
           </h2>
           <p className="text-gray-300 text-xl md:text-2xl max-w-4xl mx-auto font-light leading-relaxed">
             Pioneering the next generation of AI automation with solutions that transform your business operations and drive unprecedented growth.
