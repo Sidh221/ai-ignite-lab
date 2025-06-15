@@ -55,7 +55,7 @@ const NavBar = () => {
               ))}
             </div>
             <button
-              onClick={() => window.open('https://cal.com/nextsynthai', '_blank')}
+              onClick={() => window.open('https://cal.com/sudhanshu-rai', '_blank')}
               className="bg-gradient-to-r from-[#00D4FF] to-[#8B5FBF] text-white font-semibold rounded-lg px-6 py-2 hover:shadow-lg hover:shadow-[#00D4FF]/50 transition-all duration-300 hover:-translate-y-0.5"
             >
               Get In Touch
@@ -80,7 +80,7 @@ const NavBar = () => {
               <button
                 onClick={() => {
                   setIsMobileMenuOpen(false);
-                  window.open('https://cal.com/nextsynthai', '_blank');
+                  window.open('https://cal.com/sudhanshu-rai', '_blank');
                 }}
                 className="bg-gradient-to-r from-[#00D4FF] to-[#8B5FBF] text-white font-semibold rounded-lg px-6 py-2 hover:shadow-lg hover:shadow-[#00D4FF]/50 transition-all duration-300"
               >
