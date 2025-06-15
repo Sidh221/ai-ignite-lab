@@ -8,7 +8,7 @@ const Footer = () => {
           <div>
             <div className="flex items-center gap-2 text-2xl font-bold mb-4">
               <img 
-                src="/lovable-uploads/eaeeb697-8b99-4112-afd6-4505cd6b357d.png" 
+                src="/lovable-uploads/52e4f364-016d-4a0a-9c9b-e4b4af56d743.png" 
                 alt="NextSynthAi Logo" 
                 className="h-8 w-auto bg-transparent" 
               />
