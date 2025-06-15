@@ -102,6 +102,21 @@ export default {
             transform: "translate(-50%,-40%) scale(1)",
           },
         },
+        "gradient-text": {
+          "0%": { "background-position": "0% 50%" },
+          "100%": { "background-position": "100% 50%" }
+        },
+        "particle-float": {
+          "0%, 100%": { transform: "translateY(0px) translateX(0px)" },
+          "25%": { transform: "translateY(-20px) translateX(10px)" },
+          "50%": { transform: "translateY(-10px) translateX(-10px)" },
+          "75%": { transform: "translateY(-30px) translateX(5px)" }
+        },
+        "geometric-spin": {
+          "0%": { transform: "rotate(0deg) scale(1)" },
+          "50%": { transform: "rotate(180deg) scale(1.1)" },
+          "100%": { transform: "rotate(360deg) scale(1)" }
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -112,6 +127,9 @@ export default {
         "pulse-slow": "pulse-slow 3s infinite ease-in-out",
         wave: "wave 2.5s ease-in-out infinite",
         spotlight: "spotlight 2s ease .75s 1 forwards",
+        "gradient-text": "gradient-text 3s ease infinite",
+        "particle-float": "particle-float 6s ease-in-out infinite",
+        "geometric-spin": "geometric-spin 8s linear infinite",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -120,7 +138,8 @@ export default {
         "gradient-violet-cyclamen": "linear-gradient(90deg, #6366F1 0%, #8B5CF6 100%)",
       },
       fontFamily: {
-        sans: ['Nunito Sans', 'Inter', 'Luxora Grotesk', 'Poppins', 'sans-serif'],
+        sans: ['Inter', 'Nunito Sans', 'Luxora Grotesk', 'Poppins', 'sans-serif'],
+        inter: ['Inter', 'sans-serif'],
         nunito: ['Nunito Sans', 'sans-serif'],
       },
     },

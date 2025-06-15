@@ -2,11 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Import Nunito Sans font which matches the image font style */
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;500;600;700;800&display=swap');
+/* Import Inter font for modern futuristic design */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
-/* Keep Inter and other fonts as fallbacks */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+/* Keep other fonts as fallbacks */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 /* Import Luxora Grotesk as an option */
@@ -35,7 +35,7 @@
 
   body {
     @apply bg-black text-white font-light antialiased min-h-screen;
-    font-family: 'Nunito Sans', 'Inter', 'Luxora Grotesk', 'Poppins', sans-serif;
+    font-family: 'Inter', 'Nunito Sans', 'Luxora Grotesk', 'Poppins', sans-serif;
     font-weight: 300;
     letter-spacing: -0.015em;
     font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
@@ -48,7 +48,7 @@
   h1, h2, h3, h4, h5, h6 {
     @apply font-bold tracking-tight;
     letter-spacing: -0.02em;
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
   }
 }
 
