@@ -132,7 +132,6 @@ const ContactSection = () => {
                   <option value="restaurant" className="bg-black">Restaurant</option>
                   <option value="hotel" className="bg-black">Hotel</option>
                   <option value="medical" className="bg-black">Medical</option>
-                  <option value="realestate" className="bg-black">Real Estate</option>
                   <option value="other" className="bg-black">Other</option>
                 </select>
               </div>
