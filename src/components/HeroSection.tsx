@@ -21,27 +21,39 @@ const HeroSection = () => {
             
             <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter mb-8 leading-tight">
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#00D4FF] via-[#8B5FBF] to-[#C147E9] animate-gradient-text">
-                Artificial Intelligence
+                AI Developer
               </span>
               <br />
-              <span className="text-white">meets</span>
+              <span className="text-white">&</span>
               <br />
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#39FF14] to-[#00D4FF]">
-                limitless possibility
+                Innovation Specialist
               </span>
             </h1>
             
             <p className="text-gray-300 text-xl md:text-2xl mb-10 max-w-2xl font-light leading-relaxed">
-              We craft autonomous agents and intelligent automation systems that don't just work for your business, they evolve with it.
+              Crafting intelligent solutions through cutting-edge AI development, machine learning, and innovative automation systems.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6">
-              <button className="group relative bg-gradient-to-r from-[#00D4FF] to-[#8B5FBF] text-white font-semibold rounded-xl px-8 py-4 hover:shadow-2xl hover:shadow-[#00D4FF]/30 transition-all duration-300 hover:-translate-y-1">
-                <span className="relative z-10">Experience Intelligent Automation</span>
+              <button 
+                onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+                className="group relative bg-gradient-to-r from-[#00D4FF] to-[#8B5FBF] text-white font-semibold rounded-xl px-8 py-4 hover:shadow-2xl hover:shadow-[#00D4FF]/30 transition-all duration-300 hover:-translate-y-1"
+              >
+                <span className="relative z-10">View Projects</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-[#8B5FBF] to-[#C147E9] rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </button>
-              <button className="glass border border-[#00D4FF]/30 text-white font-semibold rounded-xl px-8 py-4 hover:bg-[#00D4FF]/10 hover:border-[#00D4FF]/50 transition-all duration-300 hover:-translate-y-1">
-                Deploy Your AI Agent Today
+              <button 
+                onClick={() => document.getElementById('skills')?.scrollIntoView({ behavior: 'smooth' })}
+                className="glass border border-[#00D4FF]/30 text-white font-semibold rounded-xl px-8 py-4 hover:bg-[#00D4FF]/10 hover:border-[#00D4FF]/50 transition-all duration-300 hover:-translate-y-1"
+              >
+                Explore Skills
+              </button>
+              <button 
+                onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
+                className="glass border border-[#39FF14]/30 text-white font-semibold rounded-xl px-8 py-4 hover:bg-[#39FF14]/10 hover:border-[#39FF14]/50 transition-all duration-300 hover:-translate-y-1"
+              >
+                About Me
               </button>
             </div>
             
