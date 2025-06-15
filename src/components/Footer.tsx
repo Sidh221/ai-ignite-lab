@@ -10,7 +10,7 @@ const Footer = () => {
               <img 
                 src="/lovable-uploads/eaeeb697-8b99-4112-afd6-4505cd6b357d.png" 
                 alt="NextSynthAi Logo" 
-                className="h-8 w-auto" 
+                className="h-8 w-auto bg-transparent" 
               />
               <span className="text-white font-bold">NextsynthAi</span>
             </div>
