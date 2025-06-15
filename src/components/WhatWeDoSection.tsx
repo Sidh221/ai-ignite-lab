@@ -43,8 +43,8 @@ const WhatWeDoSection = () => {
         {/* Services Grid with enhanced 3D effects */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
           {/* Intelligent Automation Systems */}
-          <div className="group relative">
-            <div className="glass-card rounded-3xl p-10 h-full border-2 border-[#00D4FF]/30 shadow-2xl hover:shadow-[#00D4FF]/40 transition-all duration-500 hover:scale-105 hover:border-[#00D4FF]/50 backdrop-blur-xl bg-gray-900/30">
+          <div className="group relative hover-lift">
+            <div className="glass-card card-float rounded-3xl p-10 h-full border-2 border-[#00D4FF]/30 shadow-2xl hover:shadow-[#00D4FF]/40 transition-all duration-500 hover:scale-105 hover:border-[#00D4FF]/50 backdrop-blur-xl bg-gray-900/30">
               <div className="absolute top-6 right-6 w-16 h-16 bg-gradient-to-r from-[#00D4FF] to-[#8B5FBF] rounded-2xl flex items-center justify-center opacity-90 shadow-lg shadow-[#00D4FF]/30">
                 <div className="w-8 h-8 border-2 border-white rounded-lg relative">
                   <div className="absolute inset-1 bg-white rounded opacity-70"></div>

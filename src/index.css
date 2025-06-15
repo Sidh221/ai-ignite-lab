@@ -231,3 +231,44 @@
     transform: translate(0px, 0px) scale(1);
   }
 }
+
+/* Enhanced 3D effects and parallax */
+.card-float {
+  transform: translateZ(0);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.card-float:hover {
+  transform: translateY(-20px) translateZ(50px);
+  box-shadow: 0 25px 60px rgba(0, 212, 255, 0.2);
+}
+
+.parallax-slow {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+.gradient-text-animate {
+  background: linear-gradient(-45deg, #00D4FF, #8B5FBF, #C147E9, #39FF14);
+  background-size: 400% 400%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientShift 3s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.hover-lift {
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.hover-lift:hover {
+  transform: translateY(-15px) scale(1.02);
+  filter: drop-shadow(0 20px 40px rgba(0, 212, 255, 0.3));
+}
