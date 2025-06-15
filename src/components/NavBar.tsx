@@ -15,8 +15,8 @@ const NavBar = () => {
   }, []);
 
   const navLinks = [
-    { text: "Projects", href: "#projects" },
-    { text: "Skills", href: "#skills" },
+    { text: "Services", href: "#services" },
+    { text: "Solutions", href: "#solutions" },
     { text: "About", href: "#about" },
     { text: "Contact", href: "#contact" }
   ];
@@ -32,8 +32,8 @@ const NavBar = () => {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
           <div className="flex items-center">
-            <img src="/lovable-uploads/3dd70e90-927f-4504-840a-a044bc9c7860.png" alt="NextSynthAI Logo" className="h-8 w-8" />
-            <span className="ml-3 text-xl tracking-tight">NextSynthAI</span>
+            <img src="/lovable-uploads/3dd70e90-927f-4504-840a-a044bc9c7860.png" alt="NextSynnThai Logo" className="h-8 w-8" />
+            <span className="ml-3 text-xl tracking-tight font-inter font-bold">NextSynnThai</span>
           </div>
 
           <div className="hidden md:flex space-x-10 text-sm text-gray-300">
@@ -58,9 +58,20 @@ const NavBar = () => {
           </button>
           
           <div className="hidden md:block">
-            <a href="#contact" className="text-sm border border-gray-700 rounded-md px-4 py-2 hover:bg-white/5 transition-all">
-              Get in Touch
-            </a>
+            <button 
+              onClick={() => {
+                const bookingSection = document.querySelector('[data-booking-calendar]') || document.getElementById('booking');
+                if (bookingSection) {
+                  bookingSection.scrollIntoView({ behavior: 'smooth' });
+                } else {
+                  // Fallback to contact section if booking section not found
+                  document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+              className="text-sm bg-gradient-to-r from-[#00D4FF] to-[#8B5FBF] text-white font-semibold rounded-lg px-6 py-2 hover:shadow-lg hover:shadow-[#00D4FF]/30 transition-all duration-300 hover:-translate-y-1"
+            >
+              Book a Call
+            </button>
           </div>
         </div>
 
