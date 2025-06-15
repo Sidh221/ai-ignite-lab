@@ -104,7 +104,7 @@ const CTASection = () => {
           <div className="mt-20 text-center">
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <button className="group bg-gradient-to-r from-[#8B5FBF] to-[#C147E9] text-white font-semibold rounded-xl px-8 py-4 hover:shadow-2xl hover:shadow-[#C147E9]/30 transition-all duration-300 hover:-translate-y-1 flex items-center justify-center gap-3">
-                <span>Schedule AI Demo</span>
+                <span>Book a Strategy Call</span>
                 <ArrowRight className="group-hover:translate-x-1 transition-transform" size={16} />
               </button>
               
