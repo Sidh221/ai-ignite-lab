@@ -1,4 +1,6 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { Suspense } from "react";
+import GlowingOrb from "./GlowingOrb";
 
 const HeroSection = () => {
   const { ref, inView } = useScrollAnimation();
@@ -36,7 +38,7 @@ const HeroSection = () => {
         <div className="flex flex-col lg:flex-row items-center min-h-screen">
           {/* Left content */}
           <div className={`lg:w-1/2 mb-12 lg:mb-0 lg:pr-12 transition-all duration-1000 ${inView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
-            <h1 className="text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter mb-8 leading-tight font-inter">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black tracking-tighter mb-6 leading-tight font-inter">
               <span className="gradient-text-animate">Welcome to</span>
               <br />
               <span className="gradient-text-animate">
@@ -44,131 +46,69 @@ const HeroSection = () => {
               </span>
             </h1>
             
-            <p className="text-gray-300 text-xl md:text-2xl mb-10 max-w-2xl font-light leading-relaxed">
+            <p className="text-gray-300 text-base sm:text-lg md:text-xl lg:text-2xl mb-8 max-w-2xl font-light leading-relaxed">
               Where artificial intelligence meets limitless possibility. We craft autonomous agents and intelligent automation systems that don't just work for your business, they evolve with it.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6">
               <button 
                 onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
-                className="group relative bg-gradient-to-r from-[#00D4FF] to-[#8B5FBF] text-white font-bold rounded-2xl px-8 py-4 hover:shadow-2xl hover:shadow-[#00D4FF]/60 transition-all duration-300 hover:-translate-y-1 hover:scale-105 shadow-lg shadow-[#00D4FF]/30"
+                className="group relative bg-gradient-to-r from-blue to-pink text-white font-bold rounded-2xl px-8 py-4 hover:shadow-2xl hover:shadow-blue/60 transition-all duration-300 hover:-translate-y-1 hover:scale-105 shadow-lg shadow-blue/30"
               >
                 <span className="relative z-10 font-inter">Explore Our Solutions</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-[#8B5FBF] to-[#C147E9] rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="absolute inset-0 bg-gradient-to-r from-[#00D4FF] to-[#8B5FBF] rounded-2xl blur-sm opacity-50 group-hover:opacity-70 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-violet to-pink rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-blue to-pink rounded-2xl blur-sm opacity-50 group-hover:opacity-70 transition-opacity duration-300"></div>
               </button>
               <button 
                 onClick={() => document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' })}
-                className="group glass border-2 border-[#00D4FF]/60 text-white font-bold rounded-2xl px-8 py-4 hover:bg-[#00D4FF]/20 hover:border-[#00D4FF]/100 hover:shadow-2xl hover:shadow-[#00D4FF]/60 transition-all duration-300 hover:-translate-y-1 hover:scale-105 shadow-lg shadow-[#00D4FF]/20"
+                className="group glass border-2 border-blue/60 text-white font-bold rounded-2xl px-8 py-4 hover:bg-blue/20 hover:border-blue/100 hover:shadow-2xl hover:shadow-blue/60 transition-all duration-300 hover:-translate-y-1 hover:scale-105 shadow-lg shadow-blue/20"
               >
                 <span className="font-inter">Get Started Today</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-[#00D4FF]/10 to-[#8B5FBF]/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-blue/10 to-pink/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </button>
             </div>
             
           </div>
           
-          {/* Right side - Enhanced 3D Neural Network Visualization */}
+          {/* Right side - 3D Glowing Orb */}
           <div className={`lg:w-1/2 lg:pl-12 transition-all duration-1000 delay-300 ${inView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-            <div className="relative h-[600px] lg:h-[700px]">
-              {/* 3D Neural Network Animation with enhanced depth */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="relative w-full h-full max-w-lg perspective-1000">
-                  {/* Neural Network Nodes with 3D effect */}
-                  <div className="absolute inset-0 transform-gpu">
-                    {/* Input Layer */}
-                    <div className="absolute left-8 top-1/2 -translate-y-1/2 space-y-16">
-                      {[...Array(4)].map((_, i) => (
-                        <div key={`input-${i}`} className="relative group">
-                          <div className="w-5 h-5 bg-gradient-to-r from-[#00D4FF] to-[#8B5FBF] rounded-full animate-pulse-slow shadow-2xl shadow-[#00D4FF]/60 hover:scale-125 transition-transform duration-300"></div>
-                          <div className="absolute inset-0 w-5 h-5 bg-gradient-to-r from-[#00D4FF] to-[#8B5FBF] rounded-full filter blur-sm opacity-50 animate-pulse-slow"></div>
-                        </div>
-                      ))}
-                    </div>
-                    
-                    {/* Hidden Layer 1 */}
-                    <div className="absolute left-1/3 top-1/2 -translate-y-1/2 space-y-12">
-                      {[...Array(6)].map((_, i) => (
-                        <div key={`hidden1-${i}`} className="relative group">
-                          <div className="w-4 h-4 bg-gradient-to-r from-[#8B5FBF] to-[#C147E9] rounded-full animate-pulse-slow shadow-xl shadow-[#8B5FBF]/50 hover:scale-125 transition-transform duration-300" style={{animationDelay: `${i * 0.3}s`}}></div>
-                          <div className="absolute inset-0 w-4 h-4 bg-gradient-to-r from-[#8B5FBF] to-[#C147E9] rounded-full filter blur-sm opacity-40 animate-pulse-slow" style={{animationDelay: `${i * 0.3}s`}}></div>
-                        </div>
-                      ))}
-                    </div>
-                    
-                    {/* Hidden Layer 2 */}
-                    <div className="absolute left-2/3 top-1/2 -translate-y-1/2 space-y-12">
-                      {[...Array(6)].map((_, i) => (
-                        <div key={`hidden2-${i}`} className="relative group">
-                          <div className="w-4 h-4 bg-gradient-to-r from-[#C147E9] to-[#39FF14] rounded-full animate-pulse-slow shadow-xl shadow-[#C147E9]/50 hover:scale-125 transition-transform duration-300" style={{animationDelay: `${i * 0.4}s`}}></div>
-                          <div className="absolute inset-0 w-4 h-4 bg-gradient-to-r from-[#C147E9] to-[#39FF14] rounded-full filter blur-sm opacity-40 animate-pulse-slow" style={{animationDelay: `${i * 0.4}s`}}></div>
-                        </div>
-                      ))}
-                    </div>
-                    
-                    {/* Output Layer */}
-                    <div className="absolute right-8 top-1/2 -translate-y-1/2 space-y-20">
-                      {[...Array(3)].map((_, i) => (
-                        <div key={`output-${i}`} className="relative group">
-                          <div className="w-5 h-5 bg-gradient-to-r from-[#39FF14] to-[#00D4FF] rounded-full animate-pulse-slow shadow-2xl shadow-[#39FF14]/60 hover:scale-125 transition-transform duration-300" style={{animationDelay: `${i * 0.5}s`}}></div>
-                          <div className="absolute inset-0 w-5 h-5 bg-gradient-to-r from-[#39FF14] to-[#00D4FF] rounded-full filter blur-sm opacity-50 animate-pulse-slow" style={{animationDelay: `${i * 0.5}s`}}></div>
-                        </div>
-                      ))}
-                    </div>
-                    
-                    {/* Enhanced Animated Connection Lines */}
-                    <svg className="absolute inset-0 w-full h-full pointer-events-none">
-                      <defs>
-                        <linearGradient id="connectionGradient1" x1="0%" y1="0%" x2="100%" y2="0%">
-                          <stop offset="0%" stopColor="#00D4FF" stopOpacity="0.8"/>
-                          <stop offset="50%" stopColor="#8B5FBF" stopOpacity="1"/>
-                          <stop offset="100%" stopColor="#C147E9" stopOpacity="0.8"/>
-                        </linearGradient>
-                        <linearGradient id="connectionGradient2" x1="0%" y1="0%" x2="100%" y2="0%">
-                          <stop offset="0%" stopColor="#8B5FBF" stopOpacity="0.8"/>
-                          <stop offset="50%" stopColor="#C147E9" stopOpacity="1"/>
-                          <stop offset="100%" stopColor="#39FF14" stopOpacity="0.8"/>
-                        </linearGradient>
-                      </defs>
-                      
-                      {/* Connection lines with enhanced animation */}
-                      {[...Array(25)].map((_, i) => (
-                        <line
-                          key={`connection-${i}`}
-                          x1={`${15 + (i % 3) * 20}%`}
-                          y1={`${25 + (i % 4) * 15}%`}
-                          x2={`${35 + (i % 3) * 25}%`}
-                          y2={`${20 + (i % 5) * 20}%`}
-                          stroke={i % 2 === 0 ? "url(#connectionGradient1)" : "url(#connectionGradient2)"}
-                          strokeWidth="2"
-                          opacity="0.8"
-                          className="animate-pulse-slow"
-                          style={{animationDelay: `${i * 0.15}s`}}
-                        />
-                      ))}
-                    </svg>
-                  </div>
-                  
-                  {/* Enhanced floating particles with 3D effect */}
-                  <div className="absolute inset-0">
-                    {[...Array(15)].map((_, i) => (
-                      <div
-                        key={`neural-particle-${i}`}
-                        className="absolute rounded-full animate-particle-float"
-                        style={{
-                          width: `${2 + (i % 3)}px`,
-                          height: `${2 + (i % 3)}px`,
-                          background: `${['#00D4FF', '#8B5FBF', '#C147E9', '#39FF14'][i % 4]}`,
-                          left: `${15 + (i % 5) * 15}%`,
-                          top: `${10 + (i % 4) * 20}%`,
-                          animationDelay: `${i * 0.4}s`,
-                          animationDuration: `${5 + (i % 4)}s`,
-                          boxShadow: `0 0 10px ${['#00D4FF', '#8B5FBF', '#C147E9', '#39FF14'][i % 4]}40`
-                        }}
-                      ></div>
-                    ))}
-                  </div>
+            <div className="relative h-[500px] lg:h-[600px]">
+              <Suspense fallback={
+                <div className="flex items-center justify-center h-full">
+                  <div className="w-64 h-64 rounded-full bg-gradient-to-r from-blue/20 to-pink/20 animate-pulse"></div>
                 </div>
+              }>
+                <GlowingOrb />
+              </Suspense>
+              
+              {/* Floating particles around the orb */}
+              <div className="absolute inset-0 pointer-events-none">
+                {[...Array(8)].map((_, i) => (
+                  <div
+                    key={`orb-particle-${i}`}
+                    className="absolute w-2 h-2 bg-blue/60 rounded-full animate-particle-float"
+                    style={{
+                      left: `${20 + (i % 3) * 25}%`,
+                      top: `${15 + (i % 4) * 20}%`,
+                      animationDelay: `${i * 0.8}s`,
+                      animationDuration: `${6 + (i % 3)}s`,
+                      boxShadow: '0 0 15px #4F46E5'
+                    }}
+                  ></div>
+                ))}
+                {[...Array(6)].map((_, i) => (
+                  <div
+                    key={`orb-particle-pink-${i}`}
+                    className="absolute w-1.5 h-1.5 bg-pink/60 rounded-full animate-particle-float"
+                    style={{
+                      left: `${30 + (i % 4) * 20}%`,
+                      top: `${25 + (i % 3) * 25}%`,
+                      animationDelay: `${i * 1.2}s`,
+                      animationDuration: `${7 + (i % 2)}s`,
+                      boxShadow: '0 0 12px #EC4899'
+                    }}
+                  ></div>
+                ))}
               </div>
             </div>
           </div>
