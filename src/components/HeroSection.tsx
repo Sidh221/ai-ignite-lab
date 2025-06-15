@@ -14,11 +14,6 @@ const HeroSection = () => {
         <div className="flex flex-col lg:flex-row items-center min-h-screen">
           {/* Left content */}
           <div className="lg:w-1/2 mb-12 lg:mb-0 lg:pr-12">
-            <div className="flex items-center mb-8">
-              <img src="/lovable-uploads/3dd70e90-927f-4504-840a-a044bc9c7860.png" alt="NextSynnThai Logo" className="h-16 w-16 mr-4" />
-              <div className="text-3xl font-bold tracking-tight text-white">NextSynnThai</div>
-            </div>
-            
             <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter mb-8 leading-tight">
               <span className="text-white">Welcome to</span>
               <br />
