@@ -66,20 +66,6 @@ const HeroSection = () => {
               </button>
             </div>
             
-            <div className="mt-16 grid grid-cols-2 md:grid-cols-3 gap-8">
-              <div className="text-center group hover:scale-105 transition-transform duration-300">
-                <div className="text-4xl font-black text-[#00D4FF] mb-2 font-inter animate-pulse-slow">24/7</div>
-                <div className="text-gray-400 text-sm font-medium">Intelligent Systems</div>
-              </div>
-              <div className="text-center group hover:scale-105 transition-transform duration-300">
-                <div className="text-4xl font-black text-[#39FF14] mb-2 font-inter animate-pulse-slow" style={{animationDelay: '1s'}}>∞</div>
-                <div className="text-gray-400 text-sm font-medium">Scalable Solutions</div>
-              </div>
-              <div className="text-center group hover:scale-105 transition-transform duration-300">
-                <div className="text-4xl font-black text-[#C147E9] mb-2 font-inter animate-pulse-slow" style={{animationDelay: '2s'}}>AI</div>
-                <div className="text-gray-400 text-sm font-medium">Next-Gen Technology</div>
-              </div>
-            </div>
           </div>
           
           {/* Right side - Enhanced 3D Neural Network Visualization */}

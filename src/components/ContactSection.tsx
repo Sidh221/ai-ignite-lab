@@ -44,10 +44,7 @@ const ContactSection = () => {
             Get In Touch
           </span>
           <h2 className="text-3xl md:text-5xl font-bold mb-4">
-            Ready to Transform Your
-            <span className="text-gradient-steel-violet block mt-2">
-              Customer Experience?
-            </span>
+            Contact Us
           </h2>
           <p className="text-white/80 mt-6">
             Contact us today to discuss how our AI Voice agents can revolutionize 
