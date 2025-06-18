@@ -19,14 +19,14 @@ const NavBar = () => {
   ];
 
   return (
-    <nav
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled
-          ? "py-3 bg-[#0A0E27]/95 shadow-md backdrop-blur-lg border-b border-blue/20"
-          : "py-5 bg-[#0A0E27]/90"
-      }`}
-    >
-      <div className="container mx-auto px-4">
+    <nav className="fixed top-0 w-full z-50 p-4">
+      <div
+        className={`mx-auto max-w-7xl px-6 transition-all duration-300 ${
+          isScrolled
+            ? "py-3 bg-black/80 backdrop-blur-lg border border-white/10 rounded-2xl shadow-lg shadow-black/20"
+            : "py-4 bg-black/60 backdrop-blur-md border border-white/10 rounded-2xl"
+        }`}
+      >
         <div className="flex justify-between items-center">
           <div className="flex items-center">
             <img src="/lovable-uploads/52e4f364-016d-4a0a-9c9b-e4b4af56d743.png" alt="NextSynthAi Logo" className="h-8 w-8 bg-transparent" />
@@ -56,16 +56,16 @@ const NavBar = () => {
             </div>
             <button
               onClick={() => window.open('https://cal.com/sudhanshu-rai/free-consultation', '_blank')}
-              className="bg-gradient-to-r from-[#00D4FF] to-[#8B5FBF] text-white font-semibold rounded-lg px-6 py-2 hover:shadow-lg hover:shadow-[#00D4FF]/50 transition-all duration-300 hover:-translate-y-0.5"
+              className="bg-white text-black font-semibold rounded-full px-6 py-2 hover:bg-gray-100 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
             >
-              Get In Touch
+              Contact Us
             </button>
           </div>
         </div>
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden bg-[#1a1f3a]/95 backdrop-blur-lg border border-blue/20 mt-4 rounded-lg p-4 animate-fade-in">
+          <div className="md:hidden bg-black/90 backdrop-blur-lg border border-white/10 mt-4 rounded-xl p-4 animate-fade-in">
             <div className="flex flex-col space-y-3">
               {navLinks.map((link, index) => (
                 <a
@@ -82,9 +82,9 @@ const NavBar = () => {
                   setIsMobileMenuOpen(false);
                   window.open('https://cal.com/sudhanshu-rai/free-consultation', '_blank');
                 }}
-                className="bg-gradient-to-r from-[#00D4FF] to-[#8B5FBF] text-white font-semibold rounded-lg px-6 py-2 hover:shadow-lg hover:shadow-[#00D4FF]/50 transition-all duration-300"
+                className="bg-white text-black font-semibold rounded-full px-6 py-2 hover:bg-gray-100 transition-all duration-300"
               >
-                Get In Touch
+                Contact Us
               </button>
             </div>
           </div>
