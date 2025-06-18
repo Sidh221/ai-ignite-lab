@@ -2,7 +2,7 @@ import { Facebook, Twitter, Linkedin, Instagram, Bot, Send, Mail, Phone, MapPin,
 
 const Footer = () => {
   return (
-    <footer className="pt-20 pb-10 relative bg-blue-grey">
+    <footer className="pt-20 pb-10 relative bg-gradient-to-br from-[#0A0E27] via-[#1a1f3a] to-[#0F172A] border-t border-blue/20">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-10">
           <div>
