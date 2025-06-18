@@ -47,8 +47,8 @@ const HeroSection = () => {
               </span>
             </h1>
             
-            <p className="text-gray-300 text-base sm:text-lg md:text-xl lg:text-2xl mb-8 max-w-2xl font-light leading-relaxed">
-              Where artificial intelligence meets limitless possibility. We craft autonomous agents and intelligent automation systems that don't just work for your business, they evolve with it.
+            <p className="text-gray-300 text-xl sm:text-2xl md:text-3xl lg:text-4xl mb-8 max-w-2xl font-medium leading-relaxed tracking-wide">
+              Elevate your business beyond limits
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6">
