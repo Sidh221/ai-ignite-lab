@@ -1,7 +1,7 @@
 
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Suspense } from "react";
-import GlassMorph3D from "./GlassMorph3D";
+import GlowingSphere3D from "./GlowingSphere3D";
 
 const HeroSection = () => {
   const { ref, inView } = useScrollAnimation();
@@ -83,7 +83,7 @@ const HeroSection = () => {
             
           </div>
           
-          {/* Right side - 3D Glass Morph */}
+          {/* Right side - New Glowing Sphere 3D */}
           <div className={`lg:w-1/2 lg:pl-12 transition-all duration-1000 delay-300 ${inView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
             <div className="relative h-[500px] lg:h-[600px]">
               <Suspense fallback={
@@ -91,14 +91,14 @@ const HeroSection = () => {
                   <div className="w-64 h-64 rounded-full bg-gradient-to-r from-blue/20 to-pink/20 animate-pulse"></div>
                 </div>
               }>
-                <GlassMorph3D />
+                <GlowingSphere3D />
               </Suspense>
               
-              {/* Floating glass particles around the morph */}
+              {/* Floating glass particles around the sphere */}
               <div className="absolute inset-0 pointer-events-none">
                 {[...Array(8)].map((_, i) => (
                   <div
-                    key={`glass-morph-particle-${i}`}
+                    key={`sphere-particle-${i}`}
                     className="absolute w-2 h-2 bg-blue/60 rounded-full animate-float-gentle backdrop-blur-sm"
                     style={{
                       left: `${20 + (i % 3) * 25}%`,
@@ -111,7 +111,7 @@ const HeroSection = () => {
                 ))}
                 {[...Array(6)].map((_, i) => (
                   <div
-                    key={`glass-sparkle-${i}`}
+                    key={`sphere-sparkle-${i}`}
                     className="absolute w-1.5 h-1.5 bg-pink/60 rounded-full animate-glass-morph backdrop-blur-sm"
                     style={{
                       left: `${30 + (i % 4) * 20}%`,
