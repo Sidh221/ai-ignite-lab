@@ -1,9 +1,23 @@
+
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Suspense } from "react";
 import GlassMorph3D from "./GlassMorph3D";
 
 const HeroSection = () => {
   const { ref, inView } = useScrollAnimation();
+
+  const handleExploreServices = () => {
+    // Scroll to the WhatWeDoSection which contains our services
+    const whatWeDoSection = document.querySelector('#what-we-do');
+    if (whatWeDoSection) {
+      whatWeDoSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleGetStarted = () => {
+    // Open cal.com booking directly
+    window.open('https://cal.com/sudhanshu-rai/free-consultation', '_blank');
+  };
 
   return (
     <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-[#0A0E27] via-[#1a1f3a] to-black" ref={ref}>
@@ -51,7 +65,7 @@ const HeroSection = () => {
             
             <div className="flex flex-col sm:flex-row gap-6">
               <button 
-                onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={handleExploreServices}
                 className="group relative bg-gradient-to-r from-blue to-pink text-white font-bold rounded-2xl px-8 py-4 hover:shadow-2xl hover:shadow-blue/60 transition-all duration-300 hover:-translate-y-1 hover:scale-105 shadow-lg shadow-blue/30"
               >
                 <span className="relative z-10 font-inter">Explore Our Solutions</span>
@@ -59,7 +73,7 @@ const HeroSection = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-blue to-pink rounded-2xl blur-sm opacity-50 group-hover:opacity-70 transition-opacity duration-300"></div>
               </button>
               <button 
-                onClick={() => document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={handleGetStarted}
                 className="group glass border-2 border-blue/60 text-white font-bold rounded-2xl px-8 py-4 hover:bg-blue/20 hover:border-blue/100 hover:shadow-2xl hover:shadow-blue/60 transition-all duration-300 hover:-translate-y-1 hover:scale-105 shadow-lg shadow-blue/20"
               >
                 <span className="font-inter">Get Started Today</span>
