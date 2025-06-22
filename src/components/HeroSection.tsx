@@ -60,7 +60,7 @@ const HeroSection = () => {
             </h1>
             
             <p className="text-gray-300 text-xl sm:text-2xl md:text-3xl lg:text-4xl mb-8 max-w-2xl font-medium leading-relaxed tracking-wide">
-              Elevate your business beyond limits
+              Automate What Slows You Down. Scale What Moves You Forward
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6">
