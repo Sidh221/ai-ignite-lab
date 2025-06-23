@@ -1,4 +1,3 @@
-
 import { useRef, useMemo } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
@@ -7,9 +6,12 @@ const ParticleSphere = () => {
   const pointsRef = useRef<THREE.Points>(null);
   const glowRef = useRef<THREE.Mesh>(null);
 
+  console.log('ParticleSphere component rendering');
+
   // Create particle system for the sphere
   const particleCount = 2000;
   const { positions, colors } = useMemo(() => {
+    console.log('Creating particle data');
     const positions = new Float32Array(particleCount * 3);
     const colors = new Float32Array(particleCount * 3);
     
@@ -185,6 +187,8 @@ const ParticleSphere = () => {
 };
 
 const GlowingSphere3D = () => {
+  console.log('GlowingSphere3D component rendering');
+  
   return (
     <div className="w-full h-full">
       <Canvas
@@ -194,6 +198,8 @@ const GlowingSphere3D = () => {
           alpha: true,
           powerPreference: "high-performance"
         }}
+        onCreated={() => console.log('Canvas created successfully')}
+        onError={(error) => console.error('Canvas error:', error)}
       >
         <color attach="background" args={['#0A0E27']} />
         <fog attach="fog" args={['#0A0E27', 5, 12]} />

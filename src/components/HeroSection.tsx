@@ -1,10 +1,11 @@
-
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Suspense } from "react";
 import GlowingSphere3D from "./GlowingSphere3D";
 
 const HeroSection = () => {
   const { ref, inView } = useScrollAnimation();
+
+  console.log('HeroSection component rendering, inView:', inView);
 
   const handleExploreServices = () => {
     // Scroll to the WhatWeDoSection which contains our services
@@ -91,7 +92,9 @@ const HeroSection = () => {
                   <div className="w-64 h-64 rounded-full bg-gradient-to-r from-blue/20 to-pink/20 animate-pulse"></div>
                 </div>
               }>
-                <GlowingSphere3D />
+                <div className="w-full h-full">
+                  <GlowingSphere3D />
+                </div>
               </Suspense>
               
               {/* Floating glass particles around the sphere */}
