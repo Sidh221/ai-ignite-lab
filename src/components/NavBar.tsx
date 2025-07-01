@@ -1,90 +1,87 @@
-import { useState, useEffect } from "react";
+
+import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
 const NavBar = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const navLinks = [
-    { text: "Services", href: "#services" }
+  const navItems = [
+    { name: "Home", href: "#home" },
+    { name: "Services", href: "#what-we-do" },
+    { name: "About", href: "#about" },
+    { name: "Contact", href: "#contact" },
   ];
 
+  const handleBookConsultation = () => {
+    window.open('https://cal.com/sudhanshu-rai/free-consultation', '_blank');
+  };
+
   return (
-    <nav className="fixed top-0 w-full z-50 p-4">
-      <div
-        className={`mx-auto max-w-7xl px-6 transition-all duration-300 ${
-          isScrolled
-            ? "py-3 bg-black/80 backdrop-blur-lg border border-white/10 rounded-2xl shadow-lg shadow-black/20"
-            : "py-4 bg-black/60 backdrop-blur-md border border-white/10 rounded-2xl"
-        }`}
-      >
-        <div className="flex justify-between items-center">
+    <nav className="fixed top-0 left-0 right-0 z-50 glass border-b border-white/10">
+      <div className="container mx-auto px-6">
+        <div className="flex items-center justify-between h-16">
+          {/* Logo */}
           <div className="flex items-center">
-            <img src="/lovable-uploads/52e4f364-016d-4a0a-9c9b-e4b4af56d743.png" alt="NextSynthAi Logo" className="h-8 w-8 bg-transparent" />
-            <span className="ml-3 text-xl tracking-tight font-inter font-bold text-white">NextsynthAi</span>
+            <span className="text-2xl font-bold gradient-text-animate">NextSynthAI</span>
+          </div>
+
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-8">
+            {navItems.map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                className="text-gray-300 hover:text-white transition-colors duration-300 relative group"
+              >
+                {item.name}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue to-pink transition-all duration-300 group-hover:w-full"></span>
+              </a>
+            ))}
+          </div>
+
+          {/* CTA Button */}
+          <div className="hidden md:flex">
+            <button
+              onClick={handleBookConsultation}
+              className="bg-gradient-to-r from-blue to-pink text-white font-medium rounded-lg px-6 py-2 hover:shadow-lg hover:shadow-blue/30 transition-all duration-300 hover:-translate-y-0.5"
+            >
+              Get Started
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
-          <button
-            className="md:hidden text-white"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label="Toggle mobile menu"
-          >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
-          
-          <div className="hidden md:flex items-center space-x-10">
-            <div className="flex space-x-10 text-sm text-white/80">
-              {navLinks.map((link, index) => (
-                <a
-                  key={index}
-                  href={link.href}
-                  className="hover:text-white transition-colors"
-                >
-                  {link.text}
-                </a>
-              ))}
-            </div>
+          <div className="md:hidden">
             <button
-              onClick={() => window.open('https://cal.com/sudhanshu-rai/free-consultation', '_blank')}
-              className="bg-white text-black font-semibold rounded-full px-6 py-2 hover:bg-gray-100 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="text-white hover:text-gray-300 transition-colors duration-300"
             >
-              Contact Us
+              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
         </div>
 
         {/* Mobile Menu */}
-        {isMobileMenuOpen && (
-          <div className="md:hidden bg-black/90 backdrop-blur-lg border border-white/10 mt-4 rounded-xl p-4 animate-fade-in">
-            <div className="flex flex-col space-y-3">
-              {navLinks.map((link, index) => (
+        {isMenuOpen && (
+          <div className="md:hidden border-t border-white/10">
+            <div className="px-2 pt-2 pb-3 space-y-1">
+              {navItems.map((item) => (
                 <a
-                  key={index}
-                  href={link.href}
-                  className="text-white hover:text-white/80 transition-colors py-2"
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  key={item.name}
+                  href={item.href}
+                  className="text-gray-300 hover:text-white block px-3 py-2 transition-colors duration-300"
+                  onClick={() => setIsMenuOpen(false)}
                 >
-                  {link.text}
+                  {item.name}
                 </a>
-               ))}
+              ))}
               <button
                 onClick={() => {
-                  setIsMobileMenuOpen(false);
-                  window.open('https://cal.com/sudhanshu-rai/free-consultation', '_blank');
+                  handleBookConsultation();
+                  setIsMenuOpen(false);
                 }}
-                className="bg-white text-black font-semibold rounded-full px-6 py-2 hover:bg-gray-100 transition-all duration-300"
+                className="w-full bg-gradient-to-r from-blue to-pink text-white font-medium rounded-lg px-6 py-2 mt-4 hover:shadow-lg hover:shadow-blue/30 transition-all duration-300"
               >
-                Contact Us
+                Get Started
               </button>
             </div>
           </div>
