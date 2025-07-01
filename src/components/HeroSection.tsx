@@ -1,6 +1,7 @@
+
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Suspense } from "react";
-import GlowingSphere3D from "./GlowingSphere3D";
+import OrbitalDashboard from "./OrbitalDashboard";
 
 const HeroSection = () => {
   const { ref, inView } = useScrollAnimation();
@@ -84,7 +85,7 @@ const HeroSection = () => {
             
           </div>
           
-          {/* Right side - New Glowing Sphere 3D */}
+          {/* Right side - New Orbital Dashboard Animation */}
           <div className={`lg:w-1/2 lg:pl-12 transition-all duration-1000 delay-300 ${inView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
             <div className="relative h-[500px] lg:h-[600px]">
               <Suspense fallback={
@@ -93,15 +94,15 @@ const HeroSection = () => {
                 </div>
               }>
                 <div className="w-full h-full">
-                  <GlowingSphere3D />
+                  <OrbitalDashboard />
                 </div>
               </Suspense>
               
-              {/* Floating glass particles around the sphere */}
+              {/* Floating glass particles around the animation */}
               <div className="absolute inset-0 pointer-events-none">
                 {[...Array(8)].map((_, i) => (
                   <div
-                    key={`sphere-particle-${i}`}
+                    key={`orbital-particle-${i}`}
                     className="absolute w-2 h-2 bg-blue/60 rounded-full animate-float-gentle backdrop-blur-sm"
                     style={{
                       left: `${20 + (i % 3) * 25}%`,
@@ -114,7 +115,7 @@ const HeroSection = () => {
                 ))}
                 {[...Array(6)].map((_, i) => (
                   <div
-                    key={`sphere-sparkle-${i}`}
+                    key={`orbital-sparkle-${i}`}
                     className="absolute w-1.5 h-1.5 bg-pink/60 rounded-full animate-glass-morph backdrop-blur-sm"
                     style={{
                       left: `${30 + (i % 4) * 20}%`,
