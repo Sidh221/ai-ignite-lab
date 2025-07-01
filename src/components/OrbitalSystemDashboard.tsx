@@ -104,8 +104,8 @@ const OrbitalSystemDashboard = () => {
       if (glow) {
         // Outer glow
         const glowGradient = ctx.createRadialGradient(x, y, 0, x, y, radius * 2);
-        glowGradient.addColorStop(0, `${color1}40`);
-        glowGradient.addColorStop(0.5, `${color1}20`);
+        glowGradient.addColorStop(0, `${color1}66`);
+        glowGradient.addColorStop(0.5, `${color1}33`);
         glowGradient.addColorStop(1, 'transparent');
         ctx.fillStyle = glowGradient;
         ctx.beginPath();
@@ -117,7 +117,7 @@ const OrbitalSystemDashboard = () => {
       const gradient = ctx.createRadialGradient(x - radius * 0.3, y - radius * 0.3, 0, x, y, radius);
       gradient.addColorStop(0, color1);
       gradient.addColorStop(0.7, color2);
-      gradient.addColorStop(1, `${color2}80`);
+      gradient.addColorStop(1, `${color2}CC`);
       ctx.fillStyle = gradient;
       ctx.beginPath();
       ctx.arc(x, y, radius, 0, Math.PI * 2);
@@ -125,7 +125,7 @@ const OrbitalSystemDashboard = () => {
 
       // Highlight
       const highlightGradient = ctx.createRadialGradient(x - radius * 0.4, y - radius * 0.4, 0, x - radius * 0.2, y - radius * 0.2, radius * 0.5);
-      highlightGradient.addColorStop(0, `${color1}60`);
+      highlightGradient.addColorStop(0, `${color1}99`);
       highlightGradient.addColorStop(1, 'transparent');
       ctx.fillStyle = highlightGradient;
       ctx.beginPath();
@@ -146,7 +146,7 @@ const OrbitalSystemDashboard = () => {
     const drawConnectionLine = (x1: number, y1: number, x2: number, y2: number, color: string) => {
       const gradient = ctx.createLinearGradient(x1, y1, x2, y2);
       gradient.addColorStop(0, 'transparent');
-      gradient.addColorStop(0.5, `${color}40`);
+      gradient.addColorStop(0.5, `${color}66`);
       gradient.addColorStop(1, 'transparent');
       ctx.strokeStyle = gradient;
       ctx.lineWidth = 1;
@@ -165,12 +165,12 @@ const OrbitalSystemDashboard = () => {
 
       // Draw orbital element based on type
       if (element.type === 'planet') {
-        drawGradientSphere(x, y, element.size, element.color, `${element.color}60`, true);
+        drawGradientSphere(x, y, element.size, element.color, `${element.color}99`, true);
       } else {
         // Draw smaller satellites/data points
         const gradient = ctx.createRadialGradient(x, y, 0, x, y, element.size);
         gradient.addColorStop(0, element.color);
-        gradient.addColorStop(1, `${element.color}40`);
+        gradient.addColorStop(1, `${element.color}66`);
         ctx.fillStyle = gradient;
         ctx.shadowColor = element.color;
         ctx.shadowBlur = 10;
