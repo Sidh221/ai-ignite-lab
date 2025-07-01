@@ -1,7 +1,7 @@
 
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Suspense } from "react";
-import OrbitalDashboard from "./OrbitalDashboard";
+import OrbitalSystemDashboard from "./OrbitalSystemDashboard";
 
 const HeroSection = () => {
   const { ref, inView } = useScrollAnimation();
@@ -85,44 +85,44 @@ const HeroSection = () => {
             
           </div>
           
-          {/* Right side - New Orbital Dashboard Animation */}
+          {/* Right side - Enhanced Orbital System Dashboard */}
           <div className={`lg:w-1/2 lg:pl-12 transition-all duration-1000 delay-300 ${inView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
             <div className="relative h-[500px] lg:h-[600px]">
               <Suspense fallback={
                 <div className="flex items-center justify-center h-full">
-                  <div className="w-64 h-64 rounded-full bg-gradient-to-r from-blue/20 to-pink/20 animate-pulse"></div>
+                  <div className="w-64 h-64 rounded-full bg-gradient-to-r from-orange-400/20 to-yellow-500/20 animate-pulse"></div>
                 </div>
               }>
                 <div className="w-full h-full">
-                  <OrbitalDashboard />
+                  <OrbitalSystemDashboard />
                 </div>
               </Suspense>
               
-              {/* Floating glass particles around the animation */}
+              {/* Enhanced floating particles around the animation */}
               <div className="absolute inset-0 pointer-events-none">
-                {[...Array(8)].map((_, i) => (
+                {[...Array(10)].map((_, i) => (
                   <div
                     key={`orbital-particle-${i}`}
-                    className="absolute w-2 h-2 bg-blue/60 rounded-full animate-float-gentle backdrop-blur-sm"
+                    className="absolute w-1.5 h-1.5 bg-blue/60 rounded-full animate-float-gentle backdrop-blur-sm"
                     style={{
-                      left: `${20 + (i % 3) * 25}%`,
-                      top: `${15 + (i % 4) * 20}%`,
+                      left: `${15 + (i % 4) * 20}%`,
+                      top: `${10 + (i % 5) * 18}%`,
                       animationDelay: `${i * 0.8}s`,
-                      animationDuration: `${6 + (i % 3)}s`,
-                      boxShadow: '0 0 15px #4F46E5'
+                      animationDuration: `${5 + (i % 3)}s`,
+                      boxShadow: '0 0 12px #4F46E5'
                     }}
                   ></div>
                 ))}
-                {[...Array(6)].map((_, i) => (
+                {[...Array(8)].map((_, i) => (
                   <div
                     key={`orbital-sparkle-${i}`}
-                    className="absolute w-1.5 h-1.5 bg-pink/60 rounded-full animate-glass-morph backdrop-blur-sm"
+                    className="absolute w-1 h-1 bg-orange-400/80 rounded-full animate-glass-morph backdrop-blur-sm"
                     style={{
-                      left: `${30 + (i % 4) * 20}%`,
-                      top: `${25 + (i % 3) * 25}%`,
+                      left: `${25 + (i % 3) * 25}%`,
+                      top: `${20 + (i % 4) * 20}%`,
                       animationDelay: `${i * 1.2}s`,
-                      animationDuration: `${8 + (i % 2)}s`,
-                      boxShadow: '0 0 12px #EC4899'
+                      animationDuration: `${7 + (i % 2)}s`,
+                      boxShadow: '0 0 8px #FB923C'
                     }}
                   ></div>
                 ))}
