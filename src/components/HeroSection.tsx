@@ -57,7 +57,7 @@ const HeroSection = () => {
           <div className={`lg:w-1/2 mb-12 lg:mb-0 lg:pr-12 transition-all duration-1000 ${inView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black tracking-tighter mb-6 leading-tight font-inter">
               <span className="gradient-text-animate">
-                NextsynthAi
+                HyperXai
               </span>
             </h1>
             

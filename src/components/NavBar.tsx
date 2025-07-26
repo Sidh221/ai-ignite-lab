@@ -22,7 +22,7 @@ const NavBar = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <span className="text-2xl font-bold gradient-text-animate">NextSynthAI</span>
+            <span className="text-2xl font-bold gradient-text-animate">HyperXai</span>
           </div>
 
           {/* Desktop Navigation */}

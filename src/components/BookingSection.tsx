@@ -40,7 +40,7 @@ const BookingSection = () => {
             Ready to Transform Your Business?
           </h2>
           <p className="text-gray-300 text-xl max-w-3xl mx-auto mb-8">
-            Book a free consultation and discover how NextSynthAI can revolutionize your operations with intelligent automation.
+            Book a free consultation and discover how HyperXai can revolutionize your operations with intelligent automation.
           </p>
         </div>
 
